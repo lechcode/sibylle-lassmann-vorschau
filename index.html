@@ -15,7 +15,7 @@
 <meta name="robots" content="noindex, nofollow"><!-- ENTFERNEN sobald Impressum+Datenschutz live & freigegeben -->
 <title>Bewusstseins-Mentorin in Utting am Ammersee | Sibylle Laßmann</title>
 <meta name="description" content="Ein Raum, in dem du nicht funktionieren musst. Sibylle Laßmann begleitet dich individuell zurück zu dir selbst — kostenfreies Erstgespräch.">
-<meta name="theme-color" content="#3E4A38">
+<meta name="theme-color" content="#1D1F21">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Sibylle Laßmann — Wer bist du, wenn du niemand sein musst?">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://lechcode.github.io/sibylle-lassmann-vorschau/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233E4A38'/%3E%3Cpath d='M16 8c-3 3-4 6-3 10-3-2-4-6-1-10 2 2 3 5 2 8 2-3 2-6 2-8Z' fill='%23C9A254'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231D1F21'/%3E%3Cpath d='M16 8c-3 3-4 6-3 10-3-2-4-6-1-10 2 2 3 5 2 8 2-3 2-6 2-8Z' fill='%23D6B265'/%3E%3C/svg%3E">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/karla-regular.woff2" crossorigin>
 <link rel="preload" as="image" imagesrcset="assets/hero-500.jpg 500w, assets/hero-900.jpg 900w, assets/hero-1600.jpg 1600w" imagesizes="100vw" fetchpriority="high">
@@ -33,12 +33,13 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --cream:#FBF6EE; --sand:#F1E7D6;
-  --ink:#2E2A22; --ink-soft:#5B5344; --ink-faint:#8C8271;
-  --deep:#3E4A38; --deep-2:#2C352A;
-  --gold:#8A6A3B; --gold-soft:#C9A254; --moss:#6C7A5C; --terracotta:#B06A44;
-  --line:rgba(46,42,34,.13); --line-strong:rgba(46,42,34,.22);
-  --line-deep:rgba(251,246,238,.18);
+  /* Farbgebung an die Altseite/das Logo angeglichen: Schwarz-Weiß-Basis + der echte Gold-/Grauton aus dem Baum-Logo (aus der PNG-Datei gemessen) */
+  --cream:#FAFAF7; --sand:#F0EFEA;
+  --ink:#25272A; --ink-soft:#575B5E; --ink-faint:#8B8F92;
+  --deep:#1D1F21; --deep-2:#131415;
+  --gold:#AD7F24; --gold-soft:#D6B265; --moss:#6C7A5C; --terracotta:#B06A44;
+  --line:rgba(37,39,42,.13); --line-strong:rgba(37,39,42,.22);
+  --line-deep:rgba(250,250,247,.18);
   --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
   --sans:'Karla','Karla Fallback',Arial,sans-serif;
   --s0:clamp(16px, .35vw + 15px, 17.5px);
@@ -84,8 +85,9 @@ img,svg{display:block;max-width:100%}
 /* NAV */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px var(--gut);transition:background .3s,box-shadow .3s,padding .3s}
 .nav.scrolled{background:rgba(251,246,238,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding-block:10px}
-.brand{display:flex;align-items:center;gap:10px;line-height:1.05}
-.brand img{height:34px;width:auto}
+.brand{display:flex;align-items:center;gap:10px;line-height:1.05;background:rgba(255,255,255,.95);padding:7px 16px;border-radius:var(--r-pill);box-shadow:0 4px 16px -6px rgba(0,0,0,.35);transition:background .3s,box-shadow .3s,padding .3s}
+.brand img{height:30px;width:auto;display:block}
+.nav.scrolled .brand{background:transparent;box-shadow:none;padding:0}
 .navlinks{display:flex;align-items:center;gap:26px}
 .navlinks a:not(.btn){font-size:14.5px;font-weight:700;color:#FBF6EE;position:relative;text-shadow:0 1px 8px rgba(0,0,0,.35)}
 .navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold-soft);transition:width .28s var(--ease)}
@@ -105,14 +107,15 @@ img,svg{display:block;max-width:100%}
 .hero{position:relative;color:var(--cream);padding-top:clamp(150px, 24vh, 220px);padding-bottom:clamp(90px, 12vw, 140px);overflow:clip;isolation:isolate}
 .hero-bg{position:absolute;inset:0;z-index:-2}
 .hero-bg picture,.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,53,42,.55) 0%,rgba(44,53,42,.62) 45%,rgba(28,34,26,.88) 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,19,20,.6) 0%,rgba(18,19,20,.68) 45%,rgba(12,13,14,.92) 100%)}
 .js .hero-bg img{animation:kenburns 26s ease-in-out infinite alternate}
 @media (prefers-reduced-motion:reduce){.js .hero-bg img{animation:none}}
 @keyframes kenburns{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.12) translateY(-1.4%)}}
 .hero-wrap{max-width:640px}
 .hero .eyebrow{color:var(--gold-soft)}
 .hero .eyebrow::before{background:var(--gold-soft)}
-.hero h1{font-size:var(--h1);margin:.32em 0 .48em;color:#fff}
+.hero h1{font-size:var(--h1);margin:.32em 0 .48em;color:#fff;text-shadow:0 2px 20px rgba(20,24,17,.5)}
+.hero h1 em{color:var(--gold-soft);text-shadow:0 2px 20px rgba(20,24,17,.6)}
 .hero .lede{color:#EFE7D8;max-width:52ch;font-size:var(--s1)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
 .hero .btn-primary{color:#fff}
