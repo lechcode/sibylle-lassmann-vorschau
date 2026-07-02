@@ -2,8 +2,8 @@
 <!--
   Sibylle Laßmann · Bewusstseins-Mentorin, Utting am Ammersee
   DEMO (unbeauftragte Vorschau) · Single-File, kein Build · erstellt von Lechcode
-  Rebuild v2 (Opus): editorial, Farbpalette 1:1 aus der Wix-Altseite gemessen
-  (Gold #CEB761, Pinie #35685E, Terrakotta #A45F53, Blush #E1C1BC, Creme #FAF5EB).
+  Rebuild v3 (Opus): editorial, offizielle Markenfarben von Sibylle
+  (Rosé-Weiß #FFF2F2, Gold #CEB761, Purpur #800080) — Purpur+Gold auf Rosé.
   Texte neu geschrieben aus den Fakten der Altseite, siehe _projekt/INVENTAR.md.
   noindex bis Beauftragung + Freigabe. Pflege-Stellen: Suche nach "HIER:"
 -->
@@ -15,7 +15,7 @@
 <meta name="robots" content="noindex, nofollow"><!-- ENTFERNEN sobald Impressum+Datenschutz live & freigegeben -->
 <title>Bewusstseins-Mentorin in Utting am Ammersee | Sibylle Laßmann</title>
 <meta name="description" content="Ein Raum, in dem du nicht funktionieren musst. Sibylle Laßmann begleitet dich individuell zurück zu dir selbst — das Erstgespräch ist kostenfrei.">
-<meta name="theme-color" content="#FAF5EB">
+<meta name="theme-color" content="#FFF2F2">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Sibylle Laßmann — Wer bist du, wenn du niemand sein musst?">
@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://lechcode.github.io/sibylle-lassmann-vorschau/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231D2927'/%3E%3Cpath d='M16 7c-2.6 2.6-3.4 5.6-2.4 9C11 14.6 10 11.6 12 8.4c1.6 1.6 2.4 4 2 6.6 1.6-2.6 1.8-5.4 2-8Zm0 8v11M16 18c-2 1.2-3 3-3.2 5.4M16 19c2 1.2 3 3 3.2 5.4' stroke='%23CEB761' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233D0F3D'/%3E%3Cpath d='M16 7c-2.6 2.6-3.4 5.6-2.4 9C11 14.6 10 11.6 12 8.4c1.6 1.6 2.4 4 2 6.6 1.6-2.6 1.8-5.4 2-8Zm0 8v11M16 18c-2 1.2-3 3-3.2 5.4M16 19c2 1.2 3 3 3.2 5.4' stroke='%23CEB761' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/karla-regular.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/hero-portrait-560.jpg" fetchpriority="high">
@@ -32,16 +32,19 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  /* Palette 1:1 aus der Wix-Altseite gemessen */
-  --paper:#FFFDF7; --cream:#FAF5EB; --sand:#F4EBD7;
-  --blush:#F3E7E2; --blush-mid:#E1C1BC;
-  --ink:#2B2019; --brown:#6D3F37;
-  --pine:#35685E; --pine-deep:#1D2927;
-  --gold:#CEB761; --gold-ink:#8A6C23;
-  --clay:#A45F53; --clay-deep:#8A4C41;
-  --taupe:#6E6A5E; --taupe-soft:#98917F;
-  --line:rgba(43,32,25,.12); --line-strong:rgba(43,32,25,.2);
-  --line-light:rgba(250,245,235,.2);
+  /* Offizielle Markenfarben von Sibylle: Rosé-Weiß #FFF2F2 · Gold #CEB761 · Purpur #800080.
+     Token-Namen beibehalten, Bedeutung neu belegt: --clay = Purpur (Primär/CTA/Links),
+     --pine = tiefes Aubergine (dunkle Sektionen, Shade von Purpur), --brown/--taupe = gedämpftes Mauve (Text),
+     --blush = weiches Lila (Purpur-Tint). Alle Text/BG-Paare AA-geprüft. */
+  --paper:#FFF2F2; --cream:#FCEAEC; --sand:#F7E1E4;
+  --blush:#F3E4F1; --blush-mid:#E4C6E1;
+  --ink:#2B1A2B; --brown:#5E4A5E;
+  --pine:#3D0F3D; --pine-deep:#2A0A2A;
+  --gold:#CEB761; --gold-ink:#7D6220;
+  --clay:#800080; --clay-deep:#5C1A5C;
+  --taupe:#6E5A6E; --taupe-soft:#9A86A0;
+  --line:rgba(43,26,43,.12); --line-strong:rgba(43,26,43,.2);
+  --line-light:rgba(255,242,242,.22);
   --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
   --sans:'Karla','Karla Fallback',Arial,sans-serif;
   --s-1:clamp(13px,.15vw+12.5px,14px);
@@ -66,7 +69,7 @@ a{color:var(--brown);text-decoration:none}
 a:hover{color:var(--clay)}
 img,svg{display:block;max-width:100%}
 ::selection{background:var(--gold);color:var(--pine-deep)}
-:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(138,108,35,.7);border-radius:6px}
+:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(128,0,128,.5);border-radius:6px}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 .sec{padding-block:clamp(64px,9vw,132px)}
 .skip{position:absolute;left:-999px;top:auto;background:var(--pine);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;z-index:200}
@@ -85,7 +88,7 @@ img,svg{display:block;max-width:100%}
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--sans);font-weight:700;font-size:15.5px;letter-spacing:.01em;padding:15px 28px;border-radius:var(--r-pill);min-height:52px;border:1.6px solid transparent;cursor:pointer;transition:transform .28s var(--ease),background .28s,color .28s,border-color .28s,box-shadow .28s}
 .btn .ar{transition:transform .28s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
-.btn-primary{background:var(--clay);color:#fff;box-shadow:0 14px 30px -16px rgba(164,95,83,.8)}
+.btn-primary{background:var(--clay);color:#fff;box-shadow:0 14px 30px -16px rgba(128,0,128,.45)}
 .btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px);color:#fff}
 .btn-ghost{border-color:var(--line-strong);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--brown);color:var(--brown);transform:translateY(-2px)}
@@ -94,7 +97,7 @@ img,svg{display:block;max-width:100%}
 
 /* NAV */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px var(--gut);transition:background .35s,box-shadow .35s,padding .35s}
-.nav.scrolled{background:rgba(255,253,247,.9);backdrop-filter:blur(14px) saturate(1.1);box-shadow:0 1px 0 var(--line),0 12px 30px -24px rgba(43,32,25,.4);padding-block:11px}
+.nav.scrolled{background:rgba(255,242,242,.9);backdrop-filter:blur(14px) saturate(1.1);box-shadow:0 1px 0 var(--line),0 12px 30px -24px rgba(43,26,43,.4);padding-block:11px}
 .brand{display:flex;align-items:center}
 .brand img{height:40px;width:auto}
 .navlinks{display:flex;align-items:center;gap:30px}
@@ -103,7 +106,7 @@ img,svg{display:block;max-width:100%}
 .navlinks a:not(.btn):hover{color:var(--brown)}
 .navlinks a:not(.btn):hover::after{width:100%}
 .navlinks .btn{min-height:46px;padding:11px 24px}
-.burger{display:none;width:48px;height:48px;border:1px solid var(--line-strong);border-radius:12px;background:rgba(255,253,247,.7);cursor:pointer;flex-direction:column;justify-content:center;gap:5px}
+.burger{display:none;width:48px;height:48px;border:1px solid var(--line-strong);border-radius:12px;background:rgba(255,242,242,.7);cursor:pointer;flex-direction:column;justify-content:center;gap:5px}
 .burger span{height:2px;width:20px;background:var(--ink);margin-inline:auto;transition:.3s}
 .menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-open .burger span:nth-child(2){opacity:0}
@@ -121,9 +124,9 @@ img,svg{display:block;max-width:100%}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
 /* Portrait-Rahmen: Bogen, dezent gerahmt, GRÖSSE begrenzt */
 .hero-figure{position:relative;justify-self:center;width:min(100%,440px);aspect-ratio:4/5}
-.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:var(--arch);box-shadow:0 40px 70px -34px rgba(43,32,25,.5)}
+.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:var(--arch);box-shadow:0 40px 70px -34px rgba(43,26,43,.5)}
 .hero-figure::before{content:"";position:absolute;inset:auto -18px -18px auto;width:72%;height:78%;background:var(--blush);border-radius:var(--arch);z-index:-1}
-.hero-figure::after{content:"";position:absolute;inset:14px 14px auto 14px;height:calc(100% - 28px);border:1.5px solid rgba(255,253,247,.5);border-radius:calc(var(--arch) - 8px) calc(var(--arch) - 8px) 14px 14px;pointer-events:none}
+.hero-figure::after{content:"";position:absolute;inset:14px 14px auto 14px;height:calc(100% - 28px);border:1.5px solid rgba(255,242,242,.5);border-radius:calc(var(--arch) - 8px) calc(var(--arch) - 8px) 14px 14px;pointer-events:none}
 .leaf{position:absolute;top:-22px;left:-20px;color:var(--gold);z-index:1;opacity:.9}
 
 /* TRUST band */
@@ -148,7 +151,7 @@ img,svg{display:block;max-width:100%}
 .sein .eyebrow{color:var(--gold)}.sein .eyebrow::before{background:var(--gold)}
 .sein p.sein-lead{font-family:var(--serif);font-size:clamp(22px,2.4vw,34px);line-height:1.4;max-width:20ch;margin:.6em auto .1em;color:#fff;font-weight:500}
 .sein p.sein-word{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--display);color:var(--gold);line-height:.9;letter-spacing:-.02em;margin:.1em 0 .18em;text-shadow:0 2px 40px rgba(0,0,0,.25);max-width:none}
-.sein p{color:rgba(250,245,235,.82);max-width:52ch;margin-inline:auto;font-size:var(--s1)}
+.sein p{color:rgba(255,242,242,.82);max-width:52ch;margin-inline:auto;font-size:var(--s1)}
 .sein .btn{margin-top:34px}
 .sein::before,.sein::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(206,183,97,.16),transparent 70%);pointer-events:none}
 .sein::before{top:-140px;left:-100px}.sein::after{bottom:-160px;right:-120px}
@@ -156,7 +159,7 @@ img,svg{display:block;max-width:100%}
 /* UEBER */
 .ueber .wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(38px,5vw,84px);align-items:center}
 .ueber-figure{position:relative;justify-self:center;width:min(100%,410px);aspect-ratio:4/5}
-.ueber-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;border-radius:var(--arch);box-shadow:0 40px 70px -36px rgba(43,32,25,.5)}
+.ueber-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;border-radius:var(--arch);box-shadow:0 40px 70px -36px rgba(43,26,43,.5)}
 .ueber-figure::before{content:"";position:absolute;inset:auto auto -16px -16px;width:60%;height:64%;border:1.5px solid var(--gold);border-radius:0 0 0 22px;z-index:-1}
 .ueber h2{font-size:var(--h2);margin:.3em 0 .6em}
 .ueber h2 em{color:var(--clay)}
@@ -176,7 +179,7 @@ img,svg{display:block;max-width:100%}
 /* FUER WEN */
 .fuerwen .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:44px}
 .fuerwen .col{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(28px,3.4vw,42px)}
-.fuerwen .col.ja{background:var(--paper);border-color:rgba(53,104,94,.24);box-shadow:0 24px 50px -40px rgba(53,104,94,.5)}
+.fuerwen .col.ja{background:var(--paper);border-color:rgba(128,0,128,.24);box-shadow:0 24px 50px -40px rgba(128,0,128,.5)}
 .fuerwen h3{font-size:var(--h3);display:flex;align-items:center;gap:12px}
 .fuerwen ul{list-style:none;display:grid;gap:15px;margin-top:22px}
 .fuerwen li{display:flex;gap:13px;color:var(--taupe);line-height:1.55}
@@ -211,7 +214,7 @@ img,svg{display:block;max-width:100%}
 .faq details[open] .plus{transform:rotate(180deg);border-color:var(--clay)}
 .faq details[open] .plus::after{opacity:0}
 .faq .a{color:var(--taupe);max-width:66ch;padding:0 44px 24px 0;margin-top:-4px}
-.notfall{margin-top:32px;background:rgba(164,95,83,.09);border:1px solid rgba(164,95,83,.28);border-radius:var(--r-lg);padding:22px 26px}
+.notfall{margin-top:32px;background:rgba(128,0,128,.09);border:1px solid rgba(128,0,128,.28);border-radius:var(--r-lg);padding:22px 26px}
 .notfall p{color:var(--brown);max-width:none;font-size:14.5px}
 .notfall strong{color:var(--clay-deep)}
 
@@ -220,7 +223,7 @@ img,svg{display:block;max-width:100%}
 .kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:start}
 .kontakt .eyebrow{color:var(--gold)}.kontakt .eyebrow::before{background:var(--gold)}
 .kontakt h2{color:#fff;font-size:var(--h2);margin:.3em 0 .5em}
-.kontakt .lede{color:rgba(250,245,235,.82)}
+.kontakt .lede{color:rgba(255,242,242,.82)}
 .info-line{display:flex;gap:13px;align-items:center;margin-top:16px;font-size:15.5px;color:var(--cream)}
 .info-line svg{flex:none;color:var(--gold)}
 .info-line a{color:var(--cream)}.info-line a:hover{color:var(--gold)}
@@ -234,18 +237,18 @@ img,svg{display:block;max-width:100%}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pine)}
 .honey{position:absolute;left:-9999px}
 .form-msg{margin-top:14px;font-size:14px;padding:13px 15px;border-radius:11px;display:none}
-.form-msg.ok{display:block;background:rgba(53,104,94,.12);color:var(--pine)}
+.form-msg.ok{display:block;background:rgba(128,0,128,.1);color:var(--clay)}
 .privacy-note{font-size:12.5px;color:var(--taupe-soft);margin-top:12px}
 .form-card .btn-primary{width:100%;justify-content:center}
 
 /* FOOTER */
-.site-footer{background:var(--pine-deep);color:rgba(250,245,235,.7);padding-block:52px}
+.site-footer{background:var(--pine-deep);color:rgba(255,242,242,.7);padding-block:52px}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
 .site-footer .fl{display:flex;align-items:center;gap:14px}
 .site-footer .fl svg{color:var(--gold)}
 .site-footer b{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:17px;display:block}
-.site-footer .stamp{font-size:12.5px;color:rgba(250,245,235,.42);margin-top:2px}
-.site-footer a{color:rgba(250,245,235,.82)}.site-footer a:hover{color:var(--gold)}
+.site-footer .stamp{font-size:12.5px;color:rgba(255,242,242,.42);margin-top:2px}
+.site-footer a{color:rgba(255,242,242,.82)}.site-footer a:hover{color:var(--gold)}
 .site-footer .legal{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
 
 /* REVEAL */
@@ -325,15 +328,15 @@ img,svg{display:block;max-width:100%}
     </div>
     <div class="mirror-list reveal">
       <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.4" stroke="#A45F53" stroke-width="1.4"/><path d="M8 5v3.4l2.2 1.4" stroke="#A45F53" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.4" stroke="#800080" stroke-width="1.4"/><path d="M8 5v3.4l2.2 1.4" stroke="#800080" stroke-width="1.4" stroke-linecap="round"/></svg></span>
         <p><b>Du bist erschöpft</b> und hast gerade keine Perspektive — findest dich immer wieder am selben Punkt.</p>
       </div>
       <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2.4 9.7 6l4 .3-3 2.6.9 3.9L8 10.9 4.4 12.8l.9-3.9-3-2.6 4-.3z" stroke="#A45F53" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2.4 9.7 6l4 .3-3 2.6.9 3.9L8 10.9 4.4 12.8l.9-3.9-3-2.6 4-.3z" stroke="#800080" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
         <p><b>Du weißt nicht, wie es weitergehen soll</b> — und fühlst dich in dir selbst gefangen.</p>
       </div>
       <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4Z" stroke="#A45F53" stroke-width="1.3"/><circle cx="8" cy="8" r="1.6" fill="#A45F53"/></svg></span>
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4Z" stroke="#800080" stroke-width="1.3"/><circle cx="8" cy="8" r="1.6" fill="#800080"/></svg></span>
         <p><b>Du hast schon so viel ausprobiert</b> — und spürst dich selbst kaum noch.</p>
       </div>
     </div>
@@ -385,19 +388,19 @@ img,svg{display:block;max-width:100%}
     </div>
     <div class="grid">
       <div class="col ja reveal">
-        <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(53,104,94,.1)"/><path d="M7 12.4l3.2 3.2L17 8.6" stroke="#35685E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> Du bist hier richtig, wenn …</h3>
+        <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(128,0,128,.1)"/><path d="M7 12.4l3.2 3.2L17 8.6" stroke="#800080" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> Du bist hier richtig, wenn …</h3>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#35685E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du spürst, dass etwas sich ändern muss, aber nicht weißt, wo du anfangen sollst.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#35685E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du bereit bist, wirklich hinzuschauen — auch wenn es unbequem wird.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#35685E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du dir einen Raum ohne Bewertung wünschst — individuell, ohne Standardprogramm.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du spürst, dass etwas sich ändern muss, aber nicht weißt, wo du anfangen sollst.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du bereit bist, wirklich hinzuschauen — auch wenn es unbequem wird.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du dir einen Raum ohne Bewertung wünschst — individuell, ohne Standardprogramm.</span></li>
         </ul>
       </div>
       <div class="col reveal">
-        <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(164,95,83,.1)"/><path d="M8 8l8 8M16 8l-8 8" stroke="#A45F53" stroke-width="1.8" stroke-linecap="round"/></svg> Eher nicht, wenn …</h3>
+        <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(43,26,43,.06)"/><path d="M8 8l8 8M16 8l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg> Eher nicht, wenn …</h3>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#A45F53" stroke-width="1.8" stroke-linecap="round"/></svg><span>du eine schnelle Anleitung mit fixen Schritten suchst.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#A45F53" stroke-width="1.8" stroke-linecap="round"/></svg><span>du dich in einer akuten Krise befindest und ärztliche oder psychotherapeutische Hilfe brauchst (siehe Hinweis unten).</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#A45F53" stroke-width="1.8" stroke-linecap="round"/></svg><span>du eine medizinische Diagnose oder Behandlung suchst.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du eine schnelle Anleitung mit fixen Schritten suchst.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du dich in einer akuten Krise befindest und ärztliche oder psychotherapeutische Hilfe brauchst (siehe Hinweis unten).</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du eine medizinische Diagnose oder Behandlung suchst.</span></li>
         </ul>
       </div>
     </div>
