@@ -281,10 +281,12 @@ img,svg{display:block;max-width:100%}
 
 /* RESPONSIVE */
 @media (max-width:1080px){
-  .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
+  .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:32px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
   .menu-open .navlinks{transform:translateX(0)}
   .navlinks a:not(.btn){font-size:23px}
-  .burger{display:flex;z-index:60}
+  .burger{display:flex;position:relative;z-index:60}
+  .brand{position:relative;z-index:60}
+  html.menu-open{overflow:hidden}
 }
 @media (max-width:940px){
   .hero .wrap,.mirror .wrap,.ueber .wrap,.frech .wrap,.forsch-teaser .wrap,.kontakt .wrap{grid-template-columns:1fr}
