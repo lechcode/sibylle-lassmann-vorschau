@@ -1,0 +1,384 @@
+<!doctype html>
+<!--
+  Forschungsraum „Deine Worte, deine Realität" · Sibylle Laßmann
+  Unterseite (von der Startseite verlinkt) · von Lechcode, Überarbeitung 09.07.2026.
+  Schnupper-Formular: PLATZHALTER-FORM — braucht Web3Forms-Key + Autoresponse mit Zoom-Link (W16).
+  Zoom-Links (für Autoresponse):  Di 11:30 → https://us06web.zoom.us/j/84355935760?pwd=u9y985zmrJZlf8WzLI6yTO5hd2lLpr.1
+                                  Do 18:30 → https://us06web.zoom.us/j/85013712436?pwd=5E6wJIJMjUssoVayGQ8QkjabdQxCXy.1
+  noindex bis Freigabe. Pflege-Stellen: "HIER:"
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto')</script>
+<meta name="robots" content="noindex, nofollow"><!-- ENTFERNEN sobald Impressum+Datenschutz live & freigegeben -->
+<title>Forschungsraum „Deine Worte, deine Realität" | Sibylle Laßmann</title>
+<meta name="description" content="Ein wöchentlicher Raum, in dem nichts schöngeredet wird: Was sagst du eigentlich — und was steckt dahinter? Dienstags & donnerstags online. Einmal kostenfrei schnuppern.">
+<meta name="theme-color" content="#FFF2F2">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Forschungsraum — Deine Worte, deine Realität">
+<meta property="og:description" content="Ein wöchentlicher Raum, in dem nichts schöngeredet wird. Einmal kostenfrei schnuppern.">
+<meta property="og:url" content="https://lechcode.github.io/sibylle-lassmann-vorschau/forschungsraum.html">
+<meta property="og:image" content="https://lechcode.github.io/sibylle-lassmann-vorschau/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233D0F3D'/%3E%3Cpath d='M16 7c-2.6 2.6-3.4 5.6-2.4 9C11 14.6 10 11.6 12 8.4c1.6 1.6 2.4 4 2 6.6 1.6-2.6 1.8-5.4 2-8Zm0 8v11M16 18c-2 1.2-3 3-3.2 5.4M16 19c2 1.2 3 3 3.2 5.4' stroke='%23CEB761' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-regular.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#FFF2F2; --cream:#FCEAEC; --sand:#F7E1E4;
+  --blush:#F3E4F1; --blush-mid:#E4C6E1;
+  --ink:#2B1A2B; --brown:#5E4A5E;
+  --pine:#3D0F3D; --pine-deep:#2A0A2A;
+  --gold:#CEB761; --gold-ink:#7D6220;
+  --clay:#800080; --clay-deep:#5C1A5C;
+  --taupe:#6E5A6E; --taupe-soft:#9A86A0;
+  --line:rgba(43,26,43,.12); --line-strong:rgba(43,26,43,.2);
+  --line-light:rgba(255,242,242,.22);
+  --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
+  --sans:'Hanken Grotesk','Hanken Grotesk Fallback',Arial,sans-serif;
+  --s-1:clamp(13px,.15vw+12.5px,14px);
+  --s0:clamp(16px,.35vw+15px,17.5px);
+  --s1:clamp(18.5px,.7vw+16px,22px);
+  --h3:clamp(21px,1.1vw+17px,27px);
+  --h2:clamp(30px,3vw+18px,48px);
+  --h1:clamp(38px,4.6vw+21px,68px);
+  --display:clamp(52px,11vw,120px);
+  --maxw:1200px; --gut:clamp(22px,5vw,80px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --r:14px; --r-lg:22px; --r-pill:999px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--s0);line-height:1.72;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+h1 em,h2 em,h3 em{font-style:italic;font-weight:400}
+p{max-width:62ch}
+a{color:var(--brown);text-decoration:none}a:hover{color:var(--clay)}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--pine-deep)}
+:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(128,0,128,.5);border-radius:6px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.sec{padding-block:clamp(64px,9vw,120px)}
+.skip{position:absolute;left:-999px;top:auto;background:var(--pine);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;z-index:200}
+.skip:focus{left:0;top:0}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:var(--s-1);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);display:inline-flex;align-items:center;gap:.8em}
+.eyebrow::before{content:"";width:30px;height:1.5px;background:var(--gold);flex:none}
+.eyebrow.center{justify-content:center}
+.lede{font-size:var(--s1);color:var(--taupe);line-height:1.6;font-family:var(--serif);font-weight:400}
+.sec-head{max-width:60ch}.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:var(--h2);margin:.35em 0 0}
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--sans);font-weight:700;font-size:15.5px;letter-spacing:.01em;padding:15px 28px;border-radius:var(--r-pill);min-height:52px;border:1.6px solid transparent;cursor:pointer;transition:transform .28s var(--ease),background .28s,color .28s,border-color .28s,box-shadow .28s}
+.btn .ar{transition:transform .28s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
+.btn-primary{background:var(--clay);color:#fff;box-shadow:0 14px 30px -16px rgba(128,0,128,.45)}
+.btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px);color:#fff}
+.btn-ghost{border-color:var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--brown);color:var(--brown);transform:translateY(-2px)}
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px var(--gut);transition:background .35s,box-shadow .35s,padding .35s}
+.nav.scrolled{background:rgba(255,242,242,.9);backdrop-filter:blur(14px) saturate(1.1);box-shadow:0 1px 0 var(--line),0 12px 30px -24px rgba(43,26,43,.4);padding-block:11px}
+.brand{display:flex;align-items:center}.brand img{height:40px;width:auto}
+.navlinks{display:flex;align-items:center;gap:28px}
+.navlinks a:not(.btn){font-size:15px;font-weight:600;color:var(--ink);position:relative}
+.navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--gold);transition:width .3s var(--ease)}
+.navlinks a:not(.btn):hover{color:var(--brown)}.navlinks a:not(.btn):hover::after{width:100%}
+.navlinks .btn{min-height:46px;padding:11px 24px}
+.burger{display:none;width:48px;height:48px;border:1px solid var(--line-strong);border-radius:12px;background:rgba(255,242,242,.7);cursor:pointer;flex-direction:column;justify-content:center;gap:5px}
+.burger span{height:2px;width:20px;background:var(--ink);margin-inline:auto;transition:.3s}
+.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.frame{position:relative;justify-self:center;width:min(100%,420px);aspect-ratio:4/5}
+.frame img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);box-shadow:0 40px 70px -34px rgba(43,26,43,.5)}
+.frame img{object-position:50% 38%}
+.frame::before{content:"";position:absolute;inset:auto -16px -16px auto;width:70%;height:74%;border:1.5px solid var(--gold);border-radius:var(--r-lg);z-index:-1}
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--cream),var(--paper));padding-top:clamp(120px,17vh,168px);padding-bottom:clamp(48px,7vw,90px);overflow:clip}
+.hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(36px,5vw,80px);align-items:center}
+.hero .back{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:18px}
+.hero h1{font-size:var(--h1);margin:.1em 0 24px;line-height:1.05}
+.hero h1 em{color:var(--clay)}
+.hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw+15px,18.5px);color:var(--brown);max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+/* ETHOS dark */
+.ethos{background:var(--pine);color:var(--cream);text-align:center;position:relative;overflow:clip}
+.ethos .eyebrow{color:var(--gold)}.ethos .eyebrow::before{background:var(--gold)}
+.ethos .big{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--display);color:var(--gold);line-height:.92;letter-spacing:-.02em;margin:.12em 0 .18em;max-width:none;text-shadow:0 2px 40px rgba(0,0,0,.25)}
+.ethos p{color:rgba(255,242,242,.84);max-width:52ch;margin-inline:auto;font-size:var(--s1)}
+.ethos::before,.ethos::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(206,183,97,.16),transparent 70%);pointer-events:none}
+.ethos::before{top:-140px;left:-100px}.ethos::after{bottom:-160px;right:-120px}
+/* WIE */
+.wie .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,32px);margin-top:48px}
+.wie .step{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,3vw,36px)}
+.wie .step .ic{width:46px;height:46px;border-radius:50%;background:rgba(128,0,128,.09);display:grid;place-items:center;color:var(--clay);margin-bottom:16px}
+.wie .step h3{font-size:var(--h3);margin-bottom:.4em}
+.wie .step p{color:var(--taupe);max-width:none}
+/* TERMINE */
+.termine{background:var(--sand)}
+.termine .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);margin-top:44px}
+.slot{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(28px,3.4vw,40px);position:relative}
+.slot .day{font-family:var(--serif);font-weight:600;font-size:var(--h3);color:var(--ink)}
+.slot .time{font-family:var(--serif);font-size:clamp(28px,3vw,40px);color:var(--gold-ink);line-height:1.1;margin:.15em 0 .1em}
+.slot .where{font-size:14.5px;color:var(--brown)}
+.slot .tag{position:absolute;top:22px;right:22px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clay);background:rgba(128,0,128,.08);border-radius:var(--r-pill);padding:5px 12px}
+/* SCHNUPPERN form */
+.schnupper .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(32px,5vw,68px);align-items:center}
+.schnupper h2{font-size:var(--h2);margin:.3em 0 .5em}
+.schnupper .lede{color:var(--taupe)}
+.formcard{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,3.4vw,40px)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:7px}
+.formcard input{font-size:16px}
+.field input[type=text],.field input[type=email]{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line-strong);border-radius:12px;padding:13px 15px;transition:border-color .2s}
+.field input:focus{border-color:var(--clay);outline:none}
+.choice{display:flex;gap:12px;flex-wrap:wrap}
+.choice label{flex:1;min-width:150px;display:flex;align-items:center;gap:10px;background:var(--paper);border:1.5px solid var(--line-strong);border-radius:12px;padding:12px 15px;cursor:pointer;font-weight:600;color:var(--brown);margin:0;transition:border-color .2s,background .2s}
+.choice input{accent-color:var(--clay);width:18px;height:18px}
+.choice label:has(input:checked){border-color:var(--clay);background:rgba(128,0,128,.05);color:var(--ink)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--taupe);margin:6px 0 18px}
+.consent input{margin-top:3px;accent-color:var(--clay);width:16px;height:16px;flex:none}
+.hp{position:absolute;left:-9999px;top:auto}
+.formcard .btn-primary{width:100%;justify-content:center}
+.formnote{font-size:12.5px;color:var(--taupe);margin-top:14px;text-align:center}
+.formmsg{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14.5px;line-height:1.5}
+.formmsg.ok{display:block;background:rgba(128,0,128,.08);color:var(--clay-deep);border:1px solid rgba(128,0,128,.22)}
+.formmsg.err{display:block;background:#fff3f3;color:#a12; border:1px solid #f2c2c2}
+/* STIMMEN */
+.qwrap{background:var(--blush)}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.qcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px}
+.qcard blockquote{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);max-width:none}
+.qcard cite{display:block;font-style:normal;font-weight:700;font-size:13.5px;color:var(--brown);margin-top:14px;letter-spacing:.02em}
+.videoslot{margin-top:40px;background:var(--paper);border:1px dashed var(--line-strong);border-radius:var(--r-lg);padding:clamp(26px,4vw,44px);text-align:center;color:var(--taupe)}
+.videoslot .ic{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:rgba(128,0,128,.09);display:grid;place-items:center;color:var(--clay)}
+.videoslot b{color:var(--ink);font-family:var(--serif);font-size:var(--h3);display:block;margin-bottom:.3em}
+/* FOOTER */
+.site-footer{background:var(--pine-deep);color:rgba(255,242,242,.7);padding-block:52px}
+.site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+.site-footer .fl{display:flex;align-items:center;gap:14px}.site-footer .fl svg{color:var(--gold)}
+.site-footer b{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:17px;display:block}
+.site-footer .stamp{font-size:12.5px;color:rgba(255,242,242,.72);margin-top:2px}
+.site-footer a{color:rgba(255,242,242,.82)}.site-footer a:hover{color:var(--gold)}
+.site-footer .legal{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.foto .reveal{opacity:1!important;transform:none!important}/* Screenshot-Modus ?foto */
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
+@media (max-width:1080px){
+  .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
+  .menu-open .navlinks{transform:translateX(0)}
+  .navlinks a:not(.btn){font-size:23px}.burger{display:flex;z-index:60}
+}
+@media (max-width:940px){
+  .hero .wrap,.schnupper .wrap{grid-template-columns:1fr}
+  .frame{order:-1;width:min(72%,300px)}
+  .wie .steps,.termine .grid,.qgrid{grid-template-columns:1fr}
+}
+@media print{.nav,.hero-cta,.formcard,.burger{display:none!important}body{color:#000}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Zum Inhalt springen</a>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="brand" aria-label="Sibylle Laßmann — Startseite"><img src="assets/logo-baum.png" alt="Sibylle Laßmann" width="600" height="283"></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <a href="index.html">Startseite</a>
+    <a href="#wie">So läuft es</a>
+    <a href="#termine">Termine</a>
+    <a href="#schnuppern" class="btn btn-primary">Kostenfrei schnuppern</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal in">
+      <a href="index.html" class="back">◂ zurück zur Startseite</a>
+      <p class="eyebrow">Wöchentlicher Forschungsraum</p>
+      <h1>Deine Worte, <em>deine Realität.</em></h1>
+      <p class="lede">Einmal in der Woche kommen wir zusammen und schauen genau hin: Was sagst du eigentlich — und welche Überzeugungen stecken dahinter? Kein Programm, kein Ziel, das du erreichen musst. Ein Raum, um deiner eigenen Sprache auf die Spur zu kommen.</p>
+      <div class="hero-cta">
+        <a href="#schnuppern" class="btn btn-primary">Einmal kostenfrei schnuppern <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#termine" class="btn btn-ghost">Die Termine</a>
+      </div>
+    </div>
+    <figure class="frame reveal in">
+      <img src="assets/forsch-portrait-560.jpg" srcset="assets/forsch-portrait-560.jpg 560w, assets/forsch-portrait-900.jpg 900w" sizes="(max-width:940px) 300px, 420px" alt="Sibylle Laßmann bei der Arbeit, Kerze und Journal" width="900" height="1125" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</header>
+
+<section class="ethos sec">
+  <div class="wrap">
+    <p class="eyebrow center reveal">Die Haltung</p>
+    <p class="big reveal">Kein Schönreden.</p>
+    <p class="reveal">Es geht nicht darum, alles schön oder positiv zu reden. Es geht darum, ehrlich hinzuhören — auf das, was du sagst, und auf das, was darunter liegt. Manchmal ist genau das der Anfang von echter Wandlung.</p>
+  </div>
+</section>
+
+<section class="wie sec" id="wie">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">So läuft ein Raum</p>
+      <h2>Eine Stunde, in der es echt wird</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14M4 11h14M4 16h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Wir hören hin</h3>
+        <p>Was sagst du über dich, dein Leben, deine Themen — und wie sagst du es? Sprache verrät mehr, als uns oft bewusst ist.</p>
+      </div>
+      <div class="step reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="currentColor" stroke-width="1.7"/><path d="M11 7v4l2.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Wir schauen dahinter</h3>
+        <p>Welche Überzeugung, welcher Glaubenssatz steckt hinter deinen Worten? Wir forschen — gemeinsam, ohne Bewertung.</p>
+      </div>
+      <div class="step reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3c-3 3-4 6.5-2.8 10.5C5 12 4 8.5 6.4 4.5c1.8 1.8 2.6 4.5 2.2 7.3 1.9-3 2-6.3 2.4-8.8Z" fill="currentColor"/><path d="M11 13v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Etwas darf sich lösen</h3>
+        <p>Wo du deine eigene Sprache erkennst, verändert sich etwas. Nicht als To-do — sondern weil du dich selbst neu hörst.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="termine sec" id="termine">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow center">Die Termine</p>
+      <h2>Zwei feste Zeiten pro Woche</h2>
+      <p class="lede" style="margin-top:1em;margin-inline:auto">Such dir aus, was in dein Leben passt — Dienstag oder Donnerstag. Beides online, du brauchst nur einen ruhigen Platz und Zoom.</p>
+    </div>
+    <div class="grid">
+      <div class="slot reveal">
+        <span class="tag">Mittags</span>
+        <p class="day">Dienstag</p>
+        <p class="time">11:30&nbsp;–&nbsp;12:30</p>
+        <p class="where">1&nbsp;Stunde · online via Zoom</p>
+      </div>
+      <div class="slot reveal">
+        <span class="tag">Abends</span>
+        <p class="day">Donnerstag</p>
+        <p class="time">18:30&nbsp;–&nbsp;19:30</p>
+        <p class="where">1&nbsp;Stunde · online via Zoom</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:34px;text-align:center;font-size:var(--s0)"><!-- HIER: Preis/Beitrag Forschungsraum -->Den Beitrag besprechen wir in Ruhe — komm erst einmal kostenfrei zum Schnuppern.</p>
+  </div>
+</section>
+
+<section class="schnupper sec" id="schnuppern">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Kostenfrei schnuppern</p>
+      <h2>Komm einmal dazu — <em>und schau, ob's stimmig ist.</em></h2>
+      <p class="lede">Trag dich hier ein und wähle deinen Tag. Du bekommst deinen Zoom-Link direkt per E-Mail. Ganz unverbindlich, einmal reinspüren.</p>
+    </div>
+    <!-- PLATZHALTER-FORM: Web3Forms-Key + Autoresponse mit Zoom-Link einrichten (W16, OFFENE-FRAGEN #3).
+         Der gewählte Tag geht als Feld mit; die Autoresponse liefert den passenden Zoom-Link. -->
+    <form class="formcard reveal" id="schnupperForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-ACCESS-KEY">
+      <input type="hidden" name="subject" value="Neue Schnupper-Anmeldung · Forschungsraum">
+      <input type="hidden" name="from_name" value="Forschungsraum-Anmeldung">
+      <div class="field">
+        <label for="sf-name">Dein Name</label>
+        <input type="text" id="sf-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="sf-mail">Deine E-Mail (für den Zoom-Link)</label>
+        <input type="email" id="sf-mail" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label>Welcher Tag passt dir?</label>
+        <div class="choice">
+          <label><input type="radio" name="tag" value="Dienstag 11:30–12:30" required> Dienstag · 11:30</label>
+          <label><input type="radio" name="tag" value="Donnerstag 18:30–19:30"> Donnerstag · 18:30</label>
+        </div>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required> Ich bin einverstanden, dass Sibylle mir zum Schnuppern eine E-Mail mit dem Zoom-Link schickt.</label>
+      <label class="hp" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">Bitte leer lassen</label>
+      <button type="submit" class="btn btn-primary">Zum Schnuppern anmelden <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <p class="formnote">Cookiefrei · deine Daten werden erst beim Absenden übermittelt.</p>
+      <div class="formmsg" id="sf-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="qwrap sec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow center">Stimmen aus dem Raum</p>
+      <h2>Was Teilnehmerinnen mitnehmen</h2>
+      <!-- HIER: echte Teilnehmer-Zitate aus den Aufzeichnungen einsetzen (Worte erlaubt, keine Gesichter).
+           Aktuell Platzhalter — VOM KUNDEN ZU PRÜFEN, s. OFFENE-FRAGEN #2. -->
+    </div>
+    <div class="qgrid">
+      <figure class="qcard reveal"><blockquote>„Ich habe zum ersten Mal gehört, was ich eigentlich die ganze Zeit über mich sage."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
+      <figure class="qcard reveal"><blockquote>„Endlich ein Raum, in dem nichts schöngeredet wird — das tut gut und wühlt auf zugleich."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
+      <figure class="qcard reveal"><blockquote>„Eine Stunde, die ehrlicher ist als vieles, was ich sonst so mache."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
+    </div>
+    <div class="videoslot reveal">
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="15" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M18 11l5-3v10l-5-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <b>Ein kleiner Einblick — Video folgt</b>
+      <p>Hier kommt ein kurzer Ausschnitt aus dem Forschungsraum — nur mit Sibylles Stimme und Gesicht. Wird eingebaut, sobald die Aufzeichnung da ist (cookiefrei, Zwei-Klick-Lösung).</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fl">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 6c-2.8 2.8-3.6 6-2.6 9.6C10.4 14 9.4 10.8 11.4 7.4c1.8 1.8 2.6 4.4 2.2 7.2 1.8-2.8 2-6 2.4-8.6Zm0 9v12M16 18c-2.2 1.3-3.3 3.3-3.5 6M16 19c2.2 1.3 3.3 3.3 3.5 6" stroke="#CEB761" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <b>Sibylle Laßmann</b>
+        <span class="stamp">Handgebaut in Landsberg am Lech von Lechcode</span>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navlinks=document.getElementById('navlinks');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+  burger.addEventListener('click',function(){var o=document.documentElement.classList.toggle('menu-open');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
+  navlinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.documentElement.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');});});
+  var reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    reveals.forEach(function(el){io.observe(el);});
+  }else{reveals.forEach(function(el){el.classList.add('in');});}
+  // Schnupper-Formular: Inline-Absenden ohne Redirect. Bei Platzhalter-Key zeigt Web3Forms einen Fehler —
+  // dann greift die freundliche Fehlermeldung. Nach echtem Key + Autoresponse (mit Zoom-Link) läuft es voll.
+  var f=document.getElementById('schnupperForm'),msg=document.getElementById('sf-msg');
+  if(f){f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var tag=(f.querySelector('input[name=tag]:checked')||{}).value||'deinen Tag';
+    var data=new FormData(f);
+    msg.className='formmsg';msg.textContent='';
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){f.reset();msg.className='formmsg ok';msg.textContent='Schön, dass du dabei bist! Du bekommst gleich eine E-Mail mit deinem Zoom-Link für '+tag+'. Bis bald im Raum.';}
+        else{msg.className='formmsg err';msg.textContent='Das hat gerade nicht geklappt. Bitte versuch es später noch einmal.';}
+      })
+      .catch(function(){msg.className='formmsg err';msg.textContent='Das hat gerade nicht geklappt. Bitte versuch es später noch einmal.';});
+  });}
+})();
+</script>
+</body>
+</html>
