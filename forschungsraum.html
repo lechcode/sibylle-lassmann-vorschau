@@ -2,9 +2,10 @@
 <!--
   Forschungsraum „Deine Worte, deine Realität" · Sibylle Laßmann
   Unterseite (von der Startseite verlinkt) · von Lechcode, Überarbeitung 09.07.2026.
-  Schnupper-Formular: PLATZHALTER-FORM — braucht Web3Forms-Key + Autoresponse mit Zoom-Link (W16).
-  Zoom-Links (für Autoresponse):  Di 11:30 → https://us06web.zoom.us/j/84355935760?pwd=u9y985zmrJZlf8WzLI6yTO5hd2lLpr.1
-                                  Do 18:30 → https://us06web.zoom.us/j/85013712436?pwd=5E6wJIJMjUssoVayGQ8QkjabdQxCXy.1
+  Buchung (13.07.): über Calendly statt Formular — zwei Events (Di/Do), Calendly schickt den Zoom-Link
+  automatisch mit der Bestätigung. HIER: zwei echte Calendly-Event-Links einsetzen, sobald Sibylle sie anlegt.
+  Zoom-Links (in Calendly hinterlegen):  Di 11:30 = https://us06web.zoom.us/j/84355935760?pwd=u9y985zmrJZlf8WzLI6yTO5hd2lLpr.1
+                                         Do 18:30 = https://us06web.zoom.us/j/85013712436?pwd=5E6wJIJMjUssoVayGQ8QkjabdQxCXy.1
   noindex bis Freigabe. Pflege-Stellen: "HIER:"
 -->
 <html lang="de">
@@ -14,11 +15,11 @@
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto')</script>
 <meta name="robots" content="noindex, nofollow"><!-- ENTFERNEN sobald Impressum+Datenschutz live & freigegeben -->
 <title>Forschungsraum „Deine Worte, deine Realität" | Sibylle Laßmann</title>
-<meta name="description" content="Ein wöchentlicher Raum, in dem nichts schöngeredet wird: Was sagst du eigentlich — und was steckt dahinter? Dienstags & donnerstags online. Einmal kostenfrei schnuppern.">
+<meta name="description" content="Ein wöchentlicher Raum, in dem nichts schöngeredet wird: Was sagst du eigentlich, und was steckt dahinter? Dienstags & donnerstags online. Einmal kostenfrei schnuppern.">
 <meta name="theme-color" content="#FFF2F2">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Forschungsraum — Deine Worte, deine Realität">
+<meta property="og:title" content="Forschungsraum, Deine Worte, deine Realität">
 <meta property="og:description" content="Ein wöchentlicher Raum, in dem nichts schöngeredet wird. Einmal kostenfrei schnuppern.">
 <meta property="og:url" content="https://lechcode.github.io/sibylle-lassmann-vorschau/forschungsraum.html">
 <meta property="og:image" content="https://lechcode.github.io/sibylle-lassmann-vorschau/assets/og.jpg">
@@ -151,32 +152,19 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .schnupper h2{font-size:var(--h2);margin:.3em 0 .5em}
 .schnupper .lede{color:var(--taupe)}
 .formcard{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,3.4vw,40px)}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:7px}
-.formcard input{font-size:16px}
-.field input[type=text],.field input[type=email]{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line-strong);border-radius:12px;padding:13px 15px;transition:border-color .2s}
-.field input:focus{border-color:var(--clay);outline:none}
-.choice{display:flex;gap:12px;flex-wrap:wrap}
-.choice label{flex:1;min-width:150px;display:flex;align-items:center;gap:10px;background:var(--paper);border:1.5px solid var(--line-strong);border-radius:12px;padding:12px 15px;cursor:pointer;font-weight:600;color:var(--brown);margin:0;transition:border-color .2s,background .2s}
-.choice input{accent-color:var(--clay);width:18px;height:18px}
-.choice label:has(input:checked){border-color:var(--clay);background:rgba(128,0,128,.05);color:var(--ink)}
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--taupe);margin:6px 0 18px}
-.consent input{margin-top:3px;accent-color:var(--clay);width:16px;height:16px;flex:none}
-.hp{position:absolute;left:-9999px;top:auto}
-.formcard .btn-primary{width:100%;justify-content:center}
-.formnote{font-size:12.5px;color:var(--taupe);margin-top:14px;text-align:center}
-.formmsg{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14.5px;line-height:1.5}
-.formmsg.ok{display:block;background:rgba(128,0,128,.08);color:var(--clay-deep);border:1px solid rgba(128,0,128,.22)}
-.formmsg.err{display:block;background:#fff3f3;color:#a12; border:1px solid #f2c2c2}
+.book-lead{color:var(--brown);font-size:var(--s0);margin-bottom:18px}
+.book-days{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.book-days .btn{flex:1;min-width:180px;justify-content:center}
+.safe-note{display:flex;gap:12px;align-items:flex-start;text-align:left;margin-top:22px;padding-top:20px;border-top:1px solid var(--line);color:var(--clay)}
+.safe-note p{font-size:13.5px;line-height:1.55;color:var(--taupe);max-width:none;margin:0}
+.safe-note strong{color:var(--ink)}
+.safe-note svg{flex:none;margin-top:2px}
 /* STIMMEN */
 .qwrap{background:var(--blush)}
 .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
 .qcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px}
 .qcard blockquote{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);max-width:none}
 .qcard cite{display:block;font-style:normal;font-weight:700;font-size:13.5px;color:var(--brown);margin-top:14px;letter-spacing:.02em}
-.videoslot{margin-top:40px;background:var(--paper);border:1px dashed var(--line-strong);border-radius:var(--r-lg);padding:clamp(26px,4vw,44px);text-align:center;color:var(--taupe)}
-.videoslot .ic{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:rgba(128,0,128,.09);display:grid;place-items:center;color:var(--clay)}
-.videoslot b{color:var(--ink);font-family:var(--serif);font-size:var(--h3);display:block;margin-bottom:.3em}
 /* FOOTER */
 .site-footer{background:var(--pine-deep);color:rgba(255,242,242,.7);padding-block:52px}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
@@ -209,7 +197,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 <a href="#main" class="skip">Zum Inhalt springen</a>
 
 <nav class="nav" id="nav">
-  <a href="index.html" class="brand" aria-label="Sibylle Laßmann — Startseite"><img src="assets/logo-baum.png" alt="Sibylle Laßmann" width="600" height="283"></a>
+  <a href="index.html" class="brand" aria-label="Sibylle Laßmann, Startseite"><img src="assets/logo-baum.png" alt="Sibylle Laßmann" width="600" height="283"></a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
   <div class="navlinks" id="navlinks">
     <a href="index.html">Startseite</a>
@@ -227,7 +215,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <a href="index.html" class="back">◂ zurück zur Startseite</a>
       <p class="eyebrow">Wöchentlicher Forschungsraum</p>
       <h1>Deine Worte, <em>deine Realität.</em></h1>
-      <p class="lede">Einmal in der Woche kommen wir zusammen und schauen genau hin: Was sagst du eigentlich — und welche Überzeugungen stecken dahinter? Kein Programm, kein Ziel, das du erreichen musst. Ein Raum, um deiner eigenen Sprache auf die Spur zu kommen.</p>
+      <p class="lede">Einmal in der Woche kommen wir zusammen und schauen genau hin: Was sagst du eigentlich, und welche Überzeugungen stecken dahinter? Kein Programm, kein Ziel, das du erreichen musst. Ein Raum, um deiner eigenen Sprache auf die Spur zu kommen.</p>
       <div class="hero-cta">
         <a href="#schnuppern" class="btn btn-primary">Einmal kostenfrei schnuppern <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#termine" class="btn btn-ghost">Die Termine</a>
@@ -243,7 +231,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   <div class="wrap">
     <p class="eyebrow center reveal">Die Haltung</p>
     <p class="big reveal">Kein Schönreden.</p>
-    <p class="reveal">Es geht nicht darum, alles schön oder positiv zu reden. Es geht darum, ehrlich hinzuhören — auf das, was du sagst, und auf das, was darunter liegt. Manchmal ist genau das der Anfang von echter Wandlung.</p>
+    <p class="reveal">Es geht nicht darum, alles schön oder positiv zu reden. Es geht darum, ehrlich hinzuhören, auf das, was du sagst, und auf das, was darunter liegt. Manchmal ist genau das der Anfang von echter Wandlung.</p>
   </div>
 </section>
 
@@ -257,17 +245,17 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <div class="step reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14M4 11h14M4 16h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
         <h3>Wir hören hin</h3>
-        <p>Was sagst du über dich, dein Leben, deine Themen — und wie sagst du es? Sprache verrät mehr, als uns oft bewusst ist.</p>
+        <p>Was sagst du über dich, dein Leben, deine Themen, und wie sagst du es? Sprache verrät mehr, als uns oft bewusst ist.</p>
       </div>
       <div class="step reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="currentColor" stroke-width="1.7"/><path d="M11 7v4l2.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Wir schauen dahinter</h3>
-        <p>Welche Überzeugung, welcher Glaubenssatz steckt hinter deinen Worten? Wir forschen — gemeinsam, ohne Bewertung.</p>
+        <p>Welche Überzeugung, welcher Glaubenssatz steckt hinter deinen Worten? Wir forschen, gemeinsam, ohne Bewertung.</p>
       </div>
       <div class="step reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3c-3 3-4 6.5-2.8 10.5C5 12 4 8.5 6.4 4.5c1.8 1.8 2.6 4.5 2.2 7.3 1.9-3 2-6.3 2.4-8.8Z" fill="currentColor"/><path d="M11 13v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
         <h3>Etwas darf sich lösen</h3>
-        <p>Wo du deine eigene Sprache erkennst, verändert sich etwas. Nicht als To-do — sondern weil du dich selbst neu hörst.</p>
+        <p>Wo du deine eigene Sprache erkennst, verändert sich etwas. Nicht als To-do, sondern weil du dich selbst neu hörst.</p>
       </div>
     </div>
   </div>
@@ -281,7 +269,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <h2>Sprache ist der <em>Spiegel</em> deines Inneren</h2>
     </div>
     <blockquote class="fpull reveal">
-      <p>„95&nbsp;Prozent von dem, was wir denken, ist unterbewusst. <span class="hl">Die Worte stehen an erster Stelle</span> — weil sie unsere Gedanken und unser Unterbewusstsein sichtbar machen."</p>
+      <p>„95&nbsp;Prozent von dem, was wir denken, ist unterbewusst. <span class="hl">Die Worte stehen an erster Stelle</span>, weil sie unsere Gedanken und unser Unterbewusstsein sichtbar machen."</p>
       <cite>— Sibylle Laßmann</cite>
     </blockquote>
     <ul class="questions reveal">
@@ -292,7 +280,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     </ul>
     <div class="framing reveal">
       <p class="not">Der stärkste Nutzen ist nicht <b>„Du lernst bessere Kommunikation".</b></p>
-      <p class="core">Sondern: du erkennst, wie deine Sprache deine innere Realität sichtbar macht — <em>und wo Veränderung wirklich beginnt.</em></p>
+      <p class="core">Sondern: du erkennst, wie deine Sprache deine innere Realität sichtbar macht, <em>und wo Veränderung wirklich beginnt.</em></p>
     </div>
     <h3 class="hilft reveal">Der Forschungsraum hilft dir,</h3>
     <ul class="benefits reveal">
@@ -313,7 +301,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="sec-head center reveal">
       <p class="eyebrow center">Die Termine</p>
       <h2>Zwei feste Zeiten pro Woche</h2>
-      <p class="lede" style="margin-top:1em;margin-inline:auto">Such dir aus, was in dein Leben passt — Dienstag oder Donnerstag. Beides online, du brauchst nur einen ruhigen Platz und Zoom.</p>
+      <p class="lede" style="margin-top:1em;margin-inline:auto">Such dir aus, was in dein Leben passt, Dienstag oder Donnerstag. Beides online, du brauchst nur einen ruhigen Platz und Zoom.</p>
     </div>
     <div class="grid">
       <div class="slot reveal">
@@ -329,7 +317,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
         <p class="where">1&nbsp;Stunde · online via Zoom</p>
       </div>
     </div>
-    <p class="lede" style="margin-top:34px;text-align:center;font-size:var(--s0)"><!-- HIER: Preis/Beitrag Forschungsraum -->Den Beitrag besprechen wir in Ruhe — komm erst einmal kostenfrei zum Schnuppern.</p>
+    <p class="lede" style="margin-top:34px;text-align:center;font-size:var(--s0)"><!-- HIER: Preis/Beitrag Forschungsraum -->Den Beitrag besprechen wir in Ruhe, komm erst einmal kostenfrei zum Schnuppern.</p>
   </div>
 </section>
 
@@ -337,36 +325,22 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Kostenfrei schnuppern</p>
-      <h2>Komm einmal dazu — <em>und schau, ob's stimmig ist.</em></h2>
-      <p class="lede">Trag dich hier ein und wähle deinen Tag. Du bekommst deinen Zoom-Link direkt per E-Mail. Ganz unverbindlich, einmal reinspüren.</p>
+      <h2>Komm einmal dazu, <em>und schau, ob's stimmig ist.</em></h2>
+      <p class="lede">Wähle deinen Tag, du kommst direkt zu meinem Kalender. Den Zoom-Link bekommst du automatisch mit der Terminbestätigung. Ganz unverbindlich, einmal reinspüren.</p>
     </div>
-    <!-- PLATZHALTER-FORM: Web3Forms-Key + Autoresponse mit Zoom-Link einrichten (W16, OFFENE-FRAGEN #3).
-         Der gewählte Tag geht als Feld mit; die Autoresponse liefert den passenden Zoom-Link. -->
-    <form class="formcard reveal" id="schnupperForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-ACCESS-KEY">
-      <input type="hidden" name="subject" value="Neue Schnupper-Anmeldung · Forschungsraum">
-      <input type="hidden" name="from_name" value="Forschungsraum-Anmeldung">
-      <div class="field">
-        <label for="sf-name">Dein Name</label>
-        <input type="text" id="sf-name" name="name" autocomplete="name" required>
+    <!-- HIER: zwei separate Calendly-Event-Links (Di 11:30 / Do 18:30) einsetzen, sobald Sibylle die Events angelegt hat.
+         Vorläufig auf den allgemeinen Kalender verlinkt. Calendly schickt den Zoom-Link automatisch mit der Bestätigung. -->
+    <div class="formcard reveal" style="text-align:center">
+      <p class="book-lead">Zwei feste Zeiten pro Woche, such dir aus, was passt:</p>
+      <div class="book-days">
+        <a href="https://calendly.com/socialmedia-sibyllelassmann" class="btn btn-primary" target="_blank" rel="noopener">Dienstag · 11:30 buchen <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://calendly.com/socialmedia-sibyllelassmann" class="btn btn-ghost" target="_blank" rel="noopener">Donnerstag · 18:30 buchen <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="field">
-        <label for="sf-mail">Deine E-Mail (für den Zoom-Link)</label>
-        <input type="email" id="sf-mail" name="email" autocomplete="email" required>
+      <div class="safe-note">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5l6 2.2v4.6c0 3.7-2.5 6.3-6 7.7-3.5-1.4-6-4-6-7.7V3.7L9 1.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M6.4 9l1.8 1.8L12 6.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Der Forschungsraum ist ein <strong>geschützter Raum</strong>, kein Ort für private Geschichten, sondern fokussiertes Arbeiten. Bitte komm mit <strong>Kamera an</strong> und an einem Platz, an dem du ungestört bist.</p>
       </div>
-      <div class="field">
-        <label>Welcher Tag passt dir?</label>
-        <div class="choice">
-          <label><input type="radio" name="tag" value="Dienstag 11:30–12:30" required> Dienstag · 11:30</label>
-          <label><input type="radio" name="tag" value="Donnerstag 18:30–19:30"> Donnerstag · 18:30</label>
-        </div>
-      </div>
-      <label class="consent"><input type="checkbox" name="consent" required> Ich bin einverstanden, dass Sibylle mir zum Schnuppern eine E-Mail mit dem Zoom-Link schickt.</label>
-      <label class="hp" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">Bitte leer lassen</label>
-      <button type="submit" class="btn btn-primary">Zum Schnuppern anmelden <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <p class="formnote">Cookiefrei · deine Daten werden erst beim Absenden übermittelt.</p>
-      <div class="formmsg" id="sf-msg" role="status" aria-live="polite"></div>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -375,20 +349,15 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="sec-head center reveal">
       <p class="eyebrow center">Stimmen aus dem Raum</p>
       <h2>Was Teilnehmerinnen mitnehmen</h2>
-      <!-- Echte Teilnehmerinnen-Stimmen von Sibylle geliefert (anonym, freigegeben) — s. kunde/forschungsraum-inhalte-sibylle.md -->
+      <!-- Echte Teilnehmerinnen-Stimmen von Sibylle geliefert (anonym, freigegeben), s. kunde/forschungsraum-inhalte-sibylle.md -->
     </div>
     <div class="qgrid">
-      <figure class="qcard reveal"><blockquote>„Ich kenne niemanden wie dich. Du bist einzigartig für mich, weil du mit dem arbeitest, was da ist — auch mit dem Nicht-Können und Nicht-Perfekt-Sein."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Ich kenne niemanden wie dich. Du bist einzigartig für mich, weil du mit dem arbeitest, was da ist, auch mit dem Nicht-Können und Nicht-Perfekt-Sein."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
       <figure class="qcard reveal"><blockquote>„Die Stunden mit dir sind total belebend, weil man einfach sein darf."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
       <figure class="qcard reveal"><blockquote>„Ich habe selten jemanden erlebt, der diesen Unterschied so fein versteht: Es geht nicht darum, etwas schönzureden, sondern bewusst zu wählen, was wirklich stimmig ist."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
       <figure class="qcard reveal"><blockquote>„Jetzt ist es ein Nein, das seinen Raum nehmen kann."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
       <figure class="qcard reveal"><blockquote>„Der Alltag hat sich schon verändert. Ich steige viel schneller aus und gehe wieder meine eigenen Wege."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
-      <figure class="qcard reveal"><blockquote>„Hier bekommt das Unterbewusste eine Bühne — das, was man sonst verdrängt, weil man so perfekt sein will."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
-    </div>
-    <div class="videoslot reveal">
-      <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="15" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M18 11l5-3v10l-5-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
-      <b>Ein kleiner Einblick — Video folgt</b>
-      <p>Hier kommt ein kurzer Ausschnitt aus dem Forschungsraum — nur mit Sibylles Stimme und Gesicht. Wird eingebaut, sobald die Aufzeichnung da ist (cookiefrei, Zwei-Klick-Lösung).</p>
+      <figure class="qcard reveal"><blockquote>„Hier bekommt das Unterbewusste eine Bühne, das, was man sonst verdrängt, weil man so perfekt sein will."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
     </div>
   </div>
 </section>
@@ -423,22 +392,6 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
     reveals.forEach(function(el){io.observe(el);});
   }else{reveals.forEach(function(el){el.classList.add('in');});}
-  // Schnupper-Formular: Inline-Absenden ohne Redirect. Bei Platzhalter-Key zeigt Web3Forms einen Fehler —
-  // dann greift die freundliche Fehlermeldung. Nach echtem Key + Autoresponse (mit Zoom-Link) läuft es voll.
-  var f=document.getElementById('schnupperForm'),msg=document.getElementById('sf-msg');
-  if(f){f.addEventListener('submit',function(ev){
-    ev.preventDefault();
-    var tag=(f.querySelector('input[name=tag]:checked')||{}).value||'deinen Tag';
-    var data=new FormData(f);
-    msg.className='formmsg';msg.textContent='';
-    fetch('https://api.web3forms.com/submit',{method:'POST',body:data,headers:{'Accept':'application/json'}})
-      .then(function(r){return r.json();})
-      .then(function(j){
-        if(j.success){f.reset();msg.className='formmsg ok';msg.textContent='Schön, dass du dabei bist! Du bekommst gleich eine E-Mail mit deinem Zoom-Link für '+tag+'. Bis bald im Raum.';}
-        else{msg.className='formmsg err';msg.textContent='Das hat gerade nicht geklappt. Bitte versuch es später noch einmal.';}
-      })
-      .catch(function(){msg.className='formmsg err';msg.textContent='Das hat gerade nicht geklappt. Bitte versuch es später noch einmal.';});
-  });}
 })();
 </script>
 </body>
