@@ -193,7 +193,10 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .frech .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,72px);align-items:center}
 .frech-fig{border-radius:6px;overflow:hidden;box-shadow:0 34px 64px -38px rgba(43,26,43,.55)}
 .frech-fig img{width:100%;height:auto;display:block}
+.frech-fig video{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;background:#2A0A2A;cursor:pointer}
 .frech blockquote{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(24px,2.8vw,38px);line-height:1.24;color:var(--ink);letter-spacing:-.015em;max-width:16ch}
+.frech h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,42px);line-height:1.16;color:var(--ink);letter-spacing:-.02em;max-width:14ch;margin:0}
+.frech .eyebrow{margin-bottom:16px}
 .frech .who{margin-top:18px;font-weight:700;font-size:14px;color:var(--brown);letter-spacing:.03em}
 
 /* FUNDSTUECK pull-quote */
@@ -416,11 +419,14 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 <section class="frech sec">
   <div class="wrap">
     <figure class="frech-fig reveal">
-      <img src="assets/band-frech-900.jpg" srcset="assets/band-frech-900.jpg 900w, assets/band-frech-1400.jpg 1400w" sizes="(max-width:940px) 90vw, 600px" alt="Sibylle Laßmann, lebendig und unbekümmert" width="1400" height="933" loading="lazy" decoding="async">
+      <video class="frech-video" controls preload="none" playsinline poster="assets/band-frech-1400.jpg" width="1280" height="720">
+        <source src="assets/video-kein-coach.mp4" type="video/mp4">
+        Dein Browser kann dieses Video nicht abspielen. <a href="assets/video-kein-coach.mp4">Video herunterladen</a>.
+      </video>
     </figure>
     <div class="reveal">
-      <blockquote>Ich bin nicht die Bravste. Und das darf man sehen.</blockquote>
-      <p class="who">— Sibylle</p>
+      <p class="eyebrow">Im Video</p>
+      <h2>Warum ich kein Coach bin.</h2>
     </div>
   </div>
 </section>
