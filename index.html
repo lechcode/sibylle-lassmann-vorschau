@@ -238,7 +238,9 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .forsch-hint a{color:var(--clay);font-weight:700;white-space:nowrap}
 
 /* STIMMEN */
-.stimmen .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.stimmen-video{max-width:760px;margin:48px auto 0}
+.stimmen-video .ve-poster img{object-position:50% 20%}
+.stimmen .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:760px;margin:24px auto 0}
 .testi{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 28px;display:flex;flex-direction:column;gap:18px}
 .testi .stars{display:flex;gap:3px;color:var(--gold)}
 .testi p{color:var(--ink);max-width:none;font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5}
@@ -483,11 +485,18 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   <div class="wrap">
     <div class="sec-head center reveal">
       <p class="eyebrow center">Stimmen</p>
-      <h2>Worte einer Klientin, <em>nach drei Monaten</em></h2>
-      <!-- Auszüge aus dem Testimonial-Gespräch (Roh-Video in material/Videos/). Bewusst als Text statt Video:
-           die Aufnahme ist eine Zoom-Sprecheransicht, die durchgehend zwischen beiden Personen springt.
-           Anonym als „Klientin"; vor Namens-/Bildnennung Einwilligung der Klientin einholen. -->
+      <h2>Was Menschen über mich <em>geteilt haben</em></h2>
     </div>
+    <!-- Testimonial-Video (lokal gehostet). Overlay-Zitat + Kachel-Zitate sind Auszüge aus demselben
+         Testimonial-Gespräch. Anonym als „Klientin"; vor Namens-/Bildnennung Einwilligung einholen. -->
+    <figure class="video-embed stimmen-video reveal" data-src="assets/video-stimmen.mp4" data-poster="assets/forsch-portrait-900.jpg">
+      <button class="ve-poster" type="button" aria-label="Video abspielen: Was Klientinnen über mich sagen">
+        <img src="assets/forsch-portrait-900.jpg" alt="Sibylle Laßmann in ihrem Raum" width="900" height="1125" loading="eager" decoding="async">
+        <span class="ve-scrim" aria-hidden="true"></span>
+        <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
+        <span class="ve-title">„Ich habe mich immer sehr gesehen und wertgeschätzt gefühlt."</span>
+      </button>
+    </figure>
     <div class="grid">
       <figure class="testi reveal">
         <blockquote><p>Es ist eine Tiefe, das Ankommen bei mir selbst. Ich kann viel besser bei mir bleiben und lasse die Dinge von außen nicht mehr ungefiltert in mich hinein. Das ist das stärkste Veränderungsmoment.</p></blockquote>
@@ -495,10 +504,6 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       </figure>
       <figure class="testi reveal">
         <blockquote><p>Mich hat überrascht, wie stark es körperlich wurde, obwohl wir nur digital verbunden waren, hat sich in mir ganz viel abgespielt.</p></blockquote>
-        <cite>Klientin · Einzelbegleitung</cite>
-      </figure>
-      <figure class="testi reveal">
-        <blockquote><p>Ich habe mich immer sehr gesehen und wertgeschätzt gefühlt, gerade, wie individuell Sibylle auf den Menschen eingeht.</p></blockquote>
         <cite>Klientin · Einzelbegleitung</cite>
       </figure>
     </div>
