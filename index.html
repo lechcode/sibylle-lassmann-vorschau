@@ -142,8 +142,10 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .hero h1 em{color:var(--clay);display:block;margin-top:.06em}
 .hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw+15px,18.5px);line-height:1.72;color:var(--brown);max-width:44ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
-.hero-figure{width:min(100%,400px)}
-.hero-figure img{object-position:50% 24%}
+/* Hero-Porträt rund (Kundenwunsch 13.07.: wie auf der alten Homepage). Nur der Hero,
+   das Über-mich-Bild bleibt rechteckig (.frame). */
+.hero-figure{width:min(100%,400px);aspect-ratio:1}
+.hero-figure img{object-position:50% 22%;border-radius:50%}
 
 /* TRUST */
 .trust{background:var(--sand)}
@@ -333,7 +335,6 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <p class="lede">Ich verspreche dir nicht, dass ich dich irgendwo hinbringe, ich weiß nicht, was dein Weg ist. Aber ich gehe mit dir durch die Phasen und Krisen, die ich selbst kenne. Bis du dir wieder traust und aus dir heraus entscheidest, nicht aus alten Mustern.</p>
       <div class="hero-cta">
         <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary" target="_blank" rel="noopener">Kostenfreies Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="#ueber-mich" class="btn btn-ghost">Mein Weg</a>
       </div>
     </div>
     <figure class="frame hero-figure reveal in">
