@@ -120,6 +120,24 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .wie .step .ic{width:46px;height:46px;border-radius:50%;background:rgba(128,0,128,.09);display:grid;place-items:center;color:var(--clay);margin-bottom:16px}
 .wie .step h3{font-size:var(--h3);margin-bottom:.4em}
 .wie .step p{color:var(--taupe);max-width:none}
+/* NUTZEN (Inhalte von Sibylle) */
+.nutzen{background:var(--cream)}
+.nutzen .fpull{max-width:820px;margin:clamp(28px,4vw,44px) auto 0;text-align:center}
+.nutzen .fpull p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(21px,2.4vw,31px);line-height:1.35;color:var(--ink);max-width:none}
+.nutzen .fpull p .hl{color:var(--clay);font-style:normal;font-weight:600}
+.nutzen .fpull cite{display:block;margin-top:16px;font-style:normal;font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--gold-ink)}
+.nutzen .questions{max-width:560px;margin:clamp(42px,6vw,64px) auto 0;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,32px) clamp(26px,4vw,40px);display:grid;gap:13px;box-shadow:0 24px 50px -44px rgba(43,26,43,.6)}
+.nutzen .questions li{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1vw+15px,20px);color:var(--ink);padding-left:24px;position:relative;list-style:none;line-height:1.4}
+.nutzen .questions li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.nutzen .framing{max-width:640px;margin:clamp(48px,6vw,72px) auto 0;text-align:center}
+.nutzen .framing .not{color:var(--taupe);font-size:var(--s0)}
+.nutzen .framing .not b{color:var(--ink);font-weight:700}
+.nutzen .framing .core{font-family:var(--serif);font-size:clamp(20px,2vw,27px);line-height:1.35;color:var(--ink);margin-top:.5em}
+.nutzen .framing .core em{font-style:italic;color:var(--clay)}
+.nutzen h3.hilft{text-align:center;font-size:var(--h3);margin:clamp(40px,5vw,56px) 0 0}
+.nutzen .benefits{max-width:820px;margin:24px auto 0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
+.nutzen .benefits li{display:flex;gap:12px;color:var(--brown);line-height:1.45}
+.nutzen .benefits li svg{flex:none;margin-top:3px;color:var(--clay)}
 /* TERMINE */
 .termine{background:var(--sand)}
 .termine .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);margin-top:44px}
@@ -182,7 +200,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 @media (max-width:940px){
   .hero .wrap,.schnupper .wrap{grid-template-columns:1fr}
   .frame{order:-1;width:min(72%,300px)}
-  .wie .steps,.termine .grid,.qgrid{grid-template-columns:1fr}
+  .wie .steps,.termine .grid,.qgrid,.nutzen .benefits{grid-template-columns:1fr}
 }
 @media print{.nav,.hero-cta,.formcard,.burger{display:none!important}body{color:#000}}
 </style>
@@ -255,6 +273,41 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   </div>
 </section>
 
+<!-- Inhalte von Sibylle geliefert (freigegeben, s. kunde/forschungsraum-inhalte-sibylle.md) -->
+<section class="nutzen sec" id="nutzen">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow center">Worum es wirklich geht</p>
+      <h2>Sprache ist der <em>Spiegel</em> deines Inneren</h2>
+    </div>
+    <blockquote class="fpull reveal">
+      <p>„95&nbsp;Prozent von dem, was wir denken, ist unterbewusst. <span class="hl">Die Worte stehen an erster Stelle</span> — weil sie unsere Gedanken und unser Unterbewusstsein sichtbar machen."</p>
+      <cite>— Sibylle Laßmann</cite>
+    </blockquote>
+    <ul class="questions reveal">
+      <li>Was ist wirklich meins?</li>
+      <li>Wo reagiere ich automatisch?</li>
+      <li>Wo darf ein Nein Raum bekommen?</li>
+      <li>Und welche Worte führen mich zurück zu mir?</li>
+    </ul>
+    <div class="framing reveal">
+      <p class="not">Der stärkste Nutzen ist nicht <b>„Du lernst bessere Kommunikation".</b></p>
+      <p class="core">Sondern: du erkennst, wie deine Sprache deine innere Realität sichtbar macht — <em>und wo Veränderung wirklich beginnt.</em></p>
+    </div>
+    <h3 class="hilft reveal">Der Forschungsraum hilft dir,</h3>
+    <ul class="benefits reveal">
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>deine eigenen Reaktionsmuster schneller zu erkennen</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>klarer Ja und Nein zu spüren</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>nicht mehr automatisch auf alles zu reagieren</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verantwortung dort zu lassen, wo sie hingehört</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>bewusster Grenzen zu setzen</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>dich weniger zu rechtfertigen</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>mehr bei dir zu bleiben</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>freier und klarer zu handeln</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="termine sec" id="termine">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -322,13 +375,15 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="sec-head center reveal">
       <p class="eyebrow center">Stimmen aus dem Raum</p>
       <h2>Was Teilnehmerinnen mitnehmen</h2>
-      <!-- HIER: echte Teilnehmer-Zitate aus den Aufzeichnungen einsetzen (Worte erlaubt, keine Gesichter).
-           Aktuell Platzhalter — VOM KUNDEN ZU PRÜFEN, s. OFFENE-FRAGEN #2. -->
+      <!-- Echte Teilnehmerinnen-Stimmen von Sibylle geliefert (anonym, freigegeben) — s. kunde/forschungsraum-inhalte-sibylle.md -->
     </div>
     <div class="qgrid">
-      <figure class="qcard reveal"><blockquote>„Ich habe zum ersten Mal gehört, was ich eigentlich die ganze Zeit über mich sage."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
-      <figure class="qcard reveal"><blockquote>„Endlich ein Raum, in dem nichts schöngeredet wird — das tut gut und wühlt auf zugleich."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
-      <figure class="qcard reveal"><blockquote>„Eine Stunde, die ehrlicher ist als vieles, was ich sonst so mache."</blockquote><cite>Teilnehmerin · <span style="color:var(--taupe)">Zitat folgt</span></cite></figure>
+      <figure class="qcard reveal"><blockquote>„Ich kenne niemanden wie dich. Du bist einzigartig für mich, weil du mit dem arbeitest, was da ist — auch mit dem Nicht-Können und Nicht-Perfekt-Sein."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Die Stunden mit dir sind total belebend, weil man einfach sein darf."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Ich habe selten jemanden erlebt, der diesen Unterschied so fein versteht: Es geht nicht darum, etwas schönzureden, sondern bewusst zu wählen, was wirklich stimmig ist."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Jetzt ist es ein Nein, das seinen Raum nehmen kann."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Der Alltag hat sich schon verändert. Ich steige viel schneller aus und gehe wieder meine eigenen Wege."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
+      <figure class="qcard reveal"><blockquote>„Hier bekommt das Unterbewusste eine Bühne — das, was man sonst verdrängt, weil man so perfekt sein will."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
     </div>
     <div class="videoslot reveal">
       <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="15" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M18 11l5-3v10l-5-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
