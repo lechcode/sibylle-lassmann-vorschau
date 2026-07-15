@@ -253,8 +253,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .st-card.st-ph{background:transparent;border-style:dashed;border-color:var(--gold)}
 .st-card.st-ph blockquote{color:var(--taupe)}
 .st-card.st-ph cite{color:var(--gold);text-transform:uppercase;letter-spacing:.09em;font-size:12px}
-.st-dots{display:flex;gap:8px;justify-content:center;margin-top:22px}
-.st-dot{width:8px;height:8px;border-radius:50%;background:var(--line);transition:width .3s,background .3s,border-radius .3s}
+.st-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.st-arrow{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--brown);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .25s,color .25s,border-color .25s}
+.st-arrow:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.st-dots{display:flex;gap:8px;align-items:center}
+.st-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--line);cursor:pointer;transition:width .3s,background .3s,border-radius .3s}
 .st-dot.on{width:22px;border-radius:5px;background:var(--gold)}
 
 /* FAQ */
@@ -529,7 +532,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
           <figure class="st-card st-ph"><blockquote>Deine Erfahrung aus der Begleitung könnte hier stehen.</blockquote><cite>Platzhalter</cite></figure>
         </div>
       </div>
-      <div class="st-dots" aria-hidden="true"></div>
+      <div class="st-nav">
+        <button class="st-arrow" type="button" data-dir="-1" aria-label="Vorheriges Zitat">‹</button>
+        <div class="st-dots"></div>
+        <button class="st-arrow" type="button" data-dir="1" aria-label="Nächstes Zitat">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -619,25 +626,14 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     var track=car.querySelector('.st-track'),dotsWrap=car.querySelector('.st-dots');
     var n=track.children.length;
     if(n<2)return;
-    var clone=track.children[0].cloneNode(true);clone.setAttribute('aria-hidden','true');track.appendChild(clone);
-    for(var d=0;d<n;d++){var s=document.createElement('span');s.className='st-dot'+(d===0?' on':'');dotsWrap.appendChild(s);}
-    var dots=dotsWrap.children,i=0,timer=null;
-    function active(k){for(var x=0;x<dots.length;x++)dots[x].className='st-dot'+(x===(k%n)?' on':'');}
-    function go(){
-      i++;
-      track.style.transform='translateX('+(-i*100)+'%)';
-      active(i);
-      if(i===n){
-        setTimeout(function(){
-          track.style.transition='none';i=0;track.style.transform='translateX(0)';
-          track.offsetHeight;track.style.transition='';
-        },740);
-      }
-    }
-    function play(){clearInterval(timer);timer=setInterval(go,4500);}
+    var i=0,timer=null,dots=[];
+    function go(k){i=((k%n)+n)%n;track.style.transform='translateX('+(-i*100)+'%)';for(var x=0;x<dots.length;x++)dots[x].className='st-dot'+(x===i?' on':'');}
+    function auto(){clearInterval(timer);timer=setInterval(function(){go(i+1);},5000);}
+    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='st-dot'+(idx===0?' on':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){go(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
+    car.querySelectorAll('.st-arrow').forEach(function(b){b.addEventListener('click',function(){go(i+parseInt(b.getAttribute('data-dir'),10));auto();});});
     car.addEventListener('mouseenter',function(){clearInterval(timer);});
-    car.addEventListener('mouseleave',play);
-    play();
+    car.addEventListener('mouseleave',auto);
+    go(0);auto();
   });
   var reveals=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
