@@ -196,6 +196,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .ve-play{position:absolute;top:calc(50% - 8px);left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:rgba(255,242,242,.16);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1.5px solid rgba(255,255,255,.85);display:grid;place-items:center;color:#fff;padding-left:4px;transition:transform .3s var(--ease),background .3s var(--ease)}
 .ve-poster:hover .ve-play{transform:translate(-50%,-50%) scale(1.08);background:var(--gold);border-color:var(--gold);color:var(--aubergine,#3D0F3D)}
 .ve-title{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 20px;text-align:center;font-family:var(--serif);font-weight:500;font-size:clamp(19px,2vw,24px);line-height:1.2;color:#fff;text-shadow:0 1px 14px rgba(42,10,42,.6)}
+.ve-name{display:block;margin-top:9px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:13px;letter-spacing:.03em;color:rgba(255,255,255,.82);text-shadow:0 1px 10px rgba(42,10,42,.6)}
 .video-embed video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#2A0A2A}
 .sein-video{max-width:620px;margin:38px auto 0}
 .sein-video .ve-poster img{object-position:50% 16%}
@@ -499,14 +500,14 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <p class="eyebrow center">Stimmen</p>
       <h2>Was Menschen über mich <em>geteilt haben</em></h2>
     </div>
-    <!-- Testimonial-Video (lokal gehostet). Overlay-Zitat + Kachel-Zitate sind Auszüge aus demselben
-         Testimonial-Gespräch. Anonym als „Klientin"; vor Namens-/Bildnennung Einwilligung einholen. -->
+    <!-- Testimonial-Video (lokal gehostet, von Hanna, Namensnennung freigegeben lt. Call 13.07.).
+         Die zwei Kachel-Zitate sind weiterhin anonym („Klientin") — echte Namen fehlen noch. -->
     <figure class="video-embed stimmen-video reveal" data-src="assets/video-stimmen.mp4" data-poster="assets/forsch-portrait-900.jpg">
-      <button class="ve-poster" type="button" aria-label="Video abspielen: Was Klientinnen über mich sagen">
+      <button class="ve-poster" type="button" aria-label="Video abspielen: Testimonial von Hanna">
         <img src="assets/forsch-portrait-900.jpg" alt="Sibylle Laßmann in ihrem Raum" width="900" height="1125" loading="eager" decoding="async">
         <span class="ve-scrim" aria-hidden="true"></span>
         <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
-        <span class="ve-title">„Ich habe mich immer sehr gesehen und wertgeschätzt gefühlt."</span>
+        <span class="ve-title">„Ich habe mich immer sehr gesehen und wertgeschätzt gefühlt."<span class="ve-name">Hanna · Einzelbegleitung</span></span>
       </button>
     </figure>
     <div class="grid">
