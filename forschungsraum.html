@@ -182,8 +182,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .qcard{flex:0 0 100%;box-sizing:border-box;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(30px,5vw,52px) clamp(26px,5vw,54px);min-height:210px;display:flex;flex-direction:column;justify-content:center;text-align:center}
 .qcard blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,25px);line-height:1.42;color:var(--ink);max-width:none}
 .qcard cite{display:block;font-style:normal;font-weight:700;font-size:13.5px;color:var(--brown);margin-top:18px;letter-spacing:.02em}
-.qc-dots{display:flex;gap:9px;align-items:center;justify-content:center;margin-top:24px}
-.qc-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--line);transition:width .3s,background .3s,border-radius .3s}
+.qc-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px}
+.qc-arrow{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--brown);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .25s,color .25s,border-color .25s}
+.qc-arrow:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.qc-dots{display:flex;gap:9px;align-items:center}
+.qc-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--line);cursor:pointer;transition:width .3s,background .3s,border-radius .3s}
 .qc-dot.is-active{width:22px;border-radius:5px;background:var(--gold)}
 /* FOOTER */
 .site-footer{background:var(--pine-deep);color:rgba(255,242,242,.7);padding-block:52px}
@@ -326,7 +329,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
           <figure class="qcard"><blockquote>„Es geht nicht darum, etwas schönzureden. Es geht darum, dir bewusst zu sein: Was spreche ich da? Und eine andere Entscheidung zu treffen."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
         </div>
       </div>
-      <div class="qc-dots" aria-hidden="true"></div>
+      <div class="qc-nav">
+        <button class="qc-arrow" type="button" data-dir="-1" aria-label="Vorheriges Zitat">‹</button>
+        <div class="qc-dots"></div>
+        <button class="qc-arrow" type="button" data-dir="1" aria-label="Nächstes Zitat">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -424,7 +431,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
           <figure class="qcard"><blockquote>„Du holst die Menschen dort ab, wo sie sind. Man macht miteinander etwas, und es hat mit den Dingen zu tun, die jeden im Leben bewegen."</blockquote><cite>Teilnehmerin im Forschungsraum</cite></figure>
         </div>
       </div>
-      <div class="qc-dots" aria-hidden="true"></div>
+      <div class="qc-nav">
+        <button class="qc-arrow" type="button" data-dir="-1" aria-label="Vorheriges Zitat">‹</button>
+        <div class="qc-dots"></div>
+        <button class="qc-arrow" type="button" data-dir="1" aria-label="Nächstes Zitat">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -464,20 +475,14 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     var track=car.querySelector('.qc-track'),dotsWrap=car.querySelector('.qc-dots');
     var n=track.children.length;
     if(n<2)return;
-    var clone=track.children[0].cloneNode(true);clone.setAttribute('aria-hidden','true');track.appendChild(clone);
-    var dots=[];
-    for(var d=0;d<n;d++){var s=document.createElement('span');s.className='qc-dot'+(d===0?' is-active':'');dotsWrap.appendChild(s);dots.push(s);}
-    var i=0,timer=null;
-    function go(){
-      i++;
-      track.style.transform='translateX('+(-i*100)+'%)';
-      for(var x=0;x<dots.length;x++)dots[x].className='qc-dot'+(x===(i%n)?' is-active':'');
-      if(i===n){setTimeout(function(){track.style.transition='none';i=0;track.style.transform='translateX(0)';track.offsetHeight;track.style.transition='';},640);}
-    }
-    function play(){clearInterval(timer);timer=setInterval(go,5000);}
+    var i=0,timer=null,dots=[];
+    function go(k){i=((k%n)+n)%n;track.style.transform='translateX('+(-i*100)+'%)';for(var x=0;x<dots.length;x++)dots[x].className='qc-dot'+(x===i?' is-active':'');}
+    function auto(){clearInterval(timer);timer=setInterval(function(){go(i+1);},5000);}
+    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='qc-dot'+(idx===0?' is-active':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){go(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
+    car.querySelectorAll('.qc-arrow').forEach(function(b){b.addEventListener('click',function(){go(i+parseInt(b.getAttribute('data-dir'),10));auto();});});
     car.addEventListener('mouseenter',function(){clearInterval(timer);});
-    car.addEventListener('mouseleave',play);
-    play();
+    car.addEventListener('mouseleave',auto);
+    go(0);auto();
   });
 
   document.querySelectorAll('form.snf').forEach(function(form){
