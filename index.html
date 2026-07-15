@@ -628,12 +628,10 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       track.style.transform='translateX('+(-i*100)+'%)';
       active(i);
       if(i===n){
-        var reset=function(){
-          track.removeEventListener('transitionend',reset);
+        setTimeout(function(){
           track.style.transition='none';i=0;track.style.transform='translateX(0)';
           track.offsetHeight;track.style.transition='';
-        };
-        track.addEventListener('transitionend',reset);
+        },740);
       }
     }
     function play(){clearInterval(timer);timer=setInterval(go,4500);}
