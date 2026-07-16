@@ -207,7 +207,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .ve-name{display:block;margin-top:9px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:13px;letter-spacing:.03em;color:#fff;text-shadow:0 2px 14px rgba(42,10,42,.92),0 1px 4px rgba(42,10,42,.8)}
 .video-embed video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#2A0A2A}
 .sein-video{max-width:620px;margin:38px auto 0}
-.sein-video .ve-poster img{object-position:50% 16%}
+/* 20% = der Ausschnitt, in dem Gesicht + Traumfänger sitzen (Kundenwunsch 16.07.) */
+.sein-video .ve-poster img{object-position:50% 20%}
 .fuerwen-video{max-width:640px;margin:clamp(40px,5vw,60px) auto 0}
 
 /* FUNDSTUECK pull-quote */
@@ -422,9 +423,12 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <p class="reveal">Kein Bewerten, Verbessern oder positiv Denken Sprüche. Ich halte diesen Raum, <strong>in dem du nicht funktionieren musst</strong>, in dem sichtbar werden darf, was bisher keinen Platz hatte.</p>
     <p class="reveal">Damit du <strong>fühlst, was dran ist</strong>. Dir wieder selbst traust und deine Entscheidungen <strong>aus dir heraus</strong> triffst, aus deiner Intuition, nicht aus alten Mustern.</p>
     <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary reveal" target="_blank" rel="noopener">Zum kostenfreien Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <figure class="video-embed sein-video reveal" data-src="assets/video-raum.mp4" data-poster="assets/ueber-portrait-820.jpg">
+    <!-- Cover 16.07. (Kundenwunsch): das Traumfänger-Porträt, das vorher beim Stimmen-Video lag.
+         Hochformat 4:5 im 16:9-Rahmen → object-position hält Gesicht/Traumfänger im Ausschnitt.
+         Foto: Susan Graul (dasselbe Bild trägt auf der Forschungsraum-Seite einen Credit). -->
+    <figure class="video-embed sein-video reveal" data-src="assets/video-raum.mp4" data-poster="assets/forsch-portrait-900.jpg">
       <button class="ve-poster" type="button" aria-label="Video abspielen: Ein Raum, in dem nichts mehr sein muss">
-        <img src="assets/ueber-portrait-820.jpg" alt="Sibylle Laßmann, entspannt im Freien" width="820" height="1025" loading="eager" decoding="async">
+        <img src="assets/forsch-portrait-560.jpg" srcset="assets/forsch-portrait-560.jpg 560w, assets/forsch-portrait-900.jpg 900w" sizes="(max-width:940px) 92vw, 620px" alt="Sibylle Laßmann vor rosafarbener Wand mit Traumfänger" width="900" height="1125" loading="eager" decoding="async">
         <span class="ve-scrim" aria-hidden="true"></span>
         <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
         <span class="ve-title">Ein Raum, in dem nichts mehr sein muss</span>
