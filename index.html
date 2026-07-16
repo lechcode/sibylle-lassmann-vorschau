@@ -484,9 +484,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
         </ul>
       </div>
     </div>
-    <figure class="video-embed fuerwen-video reveal" data-src="assets/video-kein-coach.mp4" data-poster="assets/band-frech-1400.jpg">
+    <!-- Cover 16.07. von Sibylle geliefert (Standbild aus dem Video), Tonwert/Schärfe optimiert.
+         Exakt 16:9 wie der Container → kein Beschnitt, object-position hier ohne Wirkung. -->
+    <figure class="video-embed fuerwen-video reveal" data-src="assets/video-kein-coach.mp4" data-poster="assets/cover-kein-coach-1280.jpg">
       <button class="ve-poster" type="button" aria-label="Video abspielen: Ich bin kein Coach">
-        <img src="assets/band-frech-1400.jpg" alt="Sibylle Laßmann" width="1400" height="933" loading="eager" decoding="async">
+        <img src="assets/cover-kein-coach-900.jpg" srcset="assets/cover-kein-coach-900.jpg 900w, assets/cover-kein-coach-1280.jpg 1280w" sizes="(max-width:940px) 92vw, 640px" alt="Sibylle Laßmann spricht in die Kamera" width="1280" height="720" loading="eager" decoding="async">
         <span class="ve-scrim" aria-hidden="true"></span>
         <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
         <span class="ve-title">Ich bin kein Coach</span>
@@ -541,9 +543,12 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <h2>Was Menschen über mich <em>geteilt haben</em></h2>
     </div>
     <!-- Testimonial-Video (lokal gehostet, von Hanna, Namensnennung freigegeben lt. Call 13.07.). -->
-    <figure class="video-embed stimmen-video reveal" data-src="assets/video-stimmen.mp4" data-poster="assets/forsch-portrait-900.jpg">
+    <!-- Cover 16.07. von Sibylle geliefert (Standbild aus dem Gespräch), Tonwert/Schärfe optimiert.
+         Die Zoom-Letterbox-Balken (je 180px) wurden auf die Container-Aubergine #2A0A2A gesetzt,
+         damit sie mit dem Rahmen verschmelzen statt als schwarze Balken zu wirken. -->
+    <figure class="video-embed stimmen-video reveal" data-src="assets/video-stimmen.mp4" data-poster="assets/cover-hanna-1280.jpg">
       <button class="ve-poster" type="button" aria-label="Video abspielen: Testimonial von Hanna">
-        <img src="assets/forsch-portrait-900.jpg" alt="Sibylle Laßmann in ihrem Raum" width="900" height="1125" loading="eager" decoding="async">
+        <img src="assets/cover-hanna-900.jpg" srcset="assets/cover-hanna-900.jpg 900w, assets/cover-hanna-1280.jpg 1280w" sizes="(max-width:940px) 92vw, 760px" alt="Hanna im Videogespräch mit Sibylle Laßmann" width="1280" height="720" loading="eager" decoding="async">
         <span class="ve-scrim" aria-hidden="true"></span>
         <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
         <span class="ve-title">„Ich habe mich immer sehr gesehen und wertgeschätzt gefühlt."<span class="ve-name">Hanna · Einzelbegleitung</span></span>
