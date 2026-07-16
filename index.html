@@ -93,6 +93,11 @@ img,svg{display:block;max-width:100%}
 .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--gold);flex:none}
 .eyebrow.center{justify-content:center}
 .lede{font-size:var(--s1);color:var(--taupe);line-height:1.6;font-family:var(--serif);font-weight:400}
+/* Schlagworte hervorheben (Querleser) + Absatzrhythmus */
+p strong,li strong{color:var(--ink);font-weight:700}
+.sein strong,.kontakt strong{color:#fff}
+.lede+.lede{margin-top:.85em}
+.sein p+p{margin-top:.9em}
 .sec-head{max-width:60ch}
 .sec-head.center{margin-inline:auto;text-align:center}
 .sec-head h2{font-size:var(--h2);margin:.35em 0 0}
@@ -350,7 +355,9 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="hero-copy reveal in">
       <p class="eyebrow">Begleitung durch Wandlung &amp; Krise</p>
       <h1>Du hast schon so viel versucht, <em>und drehst dich trotzdem im Kreis.</em></h1>
-      <p class="lede">Ich verspreche dir nicht, dass ich dich irgendwo hinbringe. Ich weiß nicht, was dein Weg ist. Aber ich kenne Wandlung. Ich kenne Krisen. Und ich kenne den Punkt, an dem nichts mehr hilft, außer ehrlich durchzugehen. Und genau da begleite ich dich, ehrlich, klar und ohne was schönzureden. Bis du wieder klar bist. Und aus dir heraus entscheidest, nicht aus alten Mustern, Prägungen, Druck oder Angst.</p>
+      <p class="lede">Ich verspreche dir nicht, dass ich dich irgendwo hinbringe. Ich weiß nicht, was dein Weg ist.</p>
+      <p class="lede">Aber ich kenne <strong>Wandlung</strong>. Ich kenne <strong>Krisen</strong>. Und ich kenne den Punkt, an dem nichts mehr hilft, außer <strong>ehrlich durchzugehen</strong>.</p>
+      <p class="lede">Und genau da begleite ich dich, <strong>ehrlich, klar und ohne was schönzureden</strong>. Bis du wieder klar bist. Und aus dir heraus entscheidest, nicht aus alten Mustern, Prägungen, Druck oder Angst.</p>
       <div class="hero-cta">
         <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary" target="_blank" rel="noopener">Kostenfreies Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
@@ -375,7 +382,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="reveal">
       <p class="eyebrow">Vielleicht kennst du das</p>
       <h2 style="font-size:var(--h2);margin-top:.3em">Du funktionierst, <em>und genau das kostet dich immer mehr Kraft.</em></h2>
-      <p class="lede" style="margin-top:1em">Du verstehst viel. Du hast schon vieles versucht. Und trotzdem spürst du: Da ist etwas, das tiefer liegt. Hier geht es nicht um noch eine Methode. Sondern darum, dort weiter zu gehen, wo Verstehen allein nicht mehr reicht.</p>
+      <p class="lede" style="margin-top:1em">Du verstehst viel. Du hast schon vieles versucht. Und trotzdem spürst du: <strong>Da ist etwas, das tiefer liegt.</strong></p>
+      <p class="lede">Hier geht es nicht um noch eine Methode. Sondern darum, dort weiter zu gehen, <strong>wo Verstehen allein nicht mehr reicht</strong>.</p>
     </div>
     <div class="mirror-list reveal">
       <div class="mirror-item">
@@ -398,7 +406,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   <div class="wrap">
     <p class="eyebrow center reveal">Worum es wirklich geht</p>
     <p class="sein-lead reveal">Nicht wegdrücken oder schönreden, sondern wirklich fühlen.</p>
-    <p class="reveal">Kein Bewerten, Verbessern oder positiv Denken Sprüche. Ich halte diesen Raum, in dem du nicht funktionieren musst, in dem sichtbar werden darf, was bisher keinen Platz hatte. Damit du fühlst, was dran ist. Dir wieder selbst traust und deine Entscheidungen aus dir heraus triffst, aus deiner Intuition, nicht aus alten Mustern.</p>
+    <p class="reveal">Kein Bewerten, Verbessern oder positiv Denken Sprüche. Ich halte diesen Raum, <strong>in dem du nicht funktionieren musst</strong>, in dem sichtbar werden darf, was bisher keinen Platz hatte.</p>
+    <p class="reveal">Damit du <strong>fühlst, was dran ist</strong>. Dir wieder selbst traust und deine Entscheidungen <strong>aus dir heraus</strong> triffst, aus deiner Intuition, nicht aus alten Mustern.</p>
     <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary reveal" target="_blank" rel="noopener">Zum kostenfreien Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <figure class="video-embed sein-video reveal" data-src="assets/video-raum.mp4" data-poster="assets/ueber-portrait-820.jpg">
       <button class="ve-poster" type="button" aria-label="Video abspielen: Ein Raum, in dem du nicht sein musst">
@@ -419,9 +428,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="reveal">
       <p class="eyebrow">Mein Weg</p>
       <h2>Ich rede nicht über Wandlung. <em>Ich lebe sie.</em></h2>
-      <p>Von der Rebellin mit Springerstiefeln zur Bankkauffrau. Mit 20 in Europas größter Privatbank, später Geschäftsführerin, zwei Firmen, eine Eventlocation. Ein Leben, das nach außen funktioniert hat. Dann starben eine Freundin und mein Vater kurz hintereinander. In mir blieb dieser Satz: „Das kann es doch nicht gewesen sein.“</p>
-      <p>Ich hab alle Firmen verkauft, meinen Besitz aufgelöst und bin alleine mit meinen Jungs im VW-Bus losgefahren. Nicht, weil ich einen Plan hatte, sondern weil mein altes Leben vorbei war. Danach kamen Zeiten voller Schmerz, schwerer Depression und unglaublicher Tiefe. Seit über zehn Jahren gehe ich nun den schamanischen Weg und reise bis heute mit einer der ältesten Schamaninnen.</p>
-      <p>Heute stehe ich hier, roh, ehrlich für dich, mit dem, was ich am besten kann. <b>Wandlung.</b> Ich habe nie aufgegeben, auch nicht, als ich ganz am Boden lag. Und genau da, wo du gerade stehst kenne ich mich aus.</p>
+      <p>Von der <strong>Rebellin mit Springerstiefeln</strong> zur Bankkauffrau. Mit 20 in Europas größter Privatbank, später Geschäftsführerin, zwei Firmen, eine Eventlocation. <strong>Ein Leben, das nach außen funktioniert hat.</strong></p>
+      <p>Dann starben eine Freundin und mein Vater kurz hintereinander. In mir blieb dieser Satz: <strong>„Das kann es doch nicht gewesen sein.“</strong></p>
+      <p>Ich hab alle Firmen verkauft, meinen Besitz aufgelöst und bin <strong>alleine mit meinen Jungs im VW-Bus</strong> losgefahren. Nicht, weil ich einen Plan hatte, sondern weil mein altes Leben vorbei war.</p>
+      <p>Danach kamen Zeiten voller <strong>Schmerz, schwerer Depression und unglaublicher Tiefe</strong>. Seit über zehn Jahren gehe ich nun den <strong>schamanischen Weg</strong> und reise bis heute mit einer der ältesten Schamaninnen.</p>
+      <p>Heute stehe ich hier, <strong>roh, ehrlich</strong> für dich, mit dem, was ich am besten kann. <b>Wandlung.</b> Ich habe nie aufgegeben, auch nicht, als ich ganz am Boden lag. Und genau da, wo du gerade stehst kenne ich mich aus.</p>
       <div class="chips">
         <span class="chip">Über 10 Jahre schamanischer Weg</span>
         <span class="chip">über 1,5 Jahre im VW-Bus · Wildnis · 19 Länder</span>
@@ -446,9 +457,9 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <div class="col ja reveal">
         <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(128,0,128,.1)"/><path d="M7 12.4l3.2 3.2L17 8.6" stroke="#800080" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg> Du bist hier richtig, wenn …</h3>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reden, Verstehen und Reflektieren allein dich nicht mehr weiter bringen.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du bereit bist, wirklich ehrlich hinzuschauen.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du dir eine Begleitung wünschst, die tiefer geht als schnelle Tipps oder Methoden.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reden, Verstehen und Reflektieren allein dich <strong>nicht mehr weiterbringen</strong>.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du bereit bist, <strong>wirklich ehrlich hinzuschauen</strong>.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9.2l3.2 3.2L14 5.6" stroke="#800080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>du dir eine Begleitung wünschst, die <strong>tiefer geht als schnelle Tipps oder Methoden</strong>.</span></li>
         </ul>
       </div>
       <div class="col reveal">
@@ -545,19 +556,19 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="list">
       <details class="reveal">
         <summary>Was passiert im kostenfreien Erstgespräch? <span class="plus"></span></summary>
-        <div class="a">Wir lernen uns in rund 45 Minuten online kennen. Du erzählst und kannst fragen stellen. Ich sage dir ehrlich, ob und wie ich dich begleiten kann, und wir spüren, ob es passt. Kein Verkaufsgespräch.</div>
+        <div class="a">Wir lernen uns in <strong>rund 45 Minuten</strong> online kennen. Du erzählst und kannst fragen stellen. Ich sage dir <strong>ehrlich</strong>, ob und wie ich dich begleiten kann, und wir spüren, ob es passt. <strong>Kein Verkaufsgespräch.</strong></div>
       </details>
       <details class="reveal">
         <summary>Ist das Therapie oder Medizin? <span class="plus"></span></summary>
-        <div class="a">Nein, und das ist oft genau der Punkt. Zu mir kommen viele Menschen, die mit Therapie oder Medizin nicht weitergekommen sind. Meine Begleitung arbeitet auf anderen Ebenen und versteht sich als Ergänzung, nicht als Ersatz: Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wenn du akut Hilfe brauchst, wende dich bitte zusätzlich an eine Ärztin oder eine Psychotherapeutin.</div>
+        <div class="a">Nein, und das ist oft genau der Punkt. Zu mir kommen viele Menschen, die mit Therapie oder Medizin nicht weitergekommen sind. Meine Begleitung arbeitet auf anderen Ebenen und versteht sich als <strong>Ergänzung, nicht als Ersatz</strong>: Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wenn du <strong>akut Hilfe</strong> brauchst, wende dich bitte zusätzlich an eine Ärztin oder eine Psychotherapeutin.</div>
       </details>
       <details class="reveal">
         <summary>Ich war schon in Therapie, passt das trotzdem? <span class="plus"></span></summary>
-        <div class="a">Sehr oft sogar. „Trotz guter Therapie komme ich an das Thema nicht ran", das höre ich häufig. Ich arbeite anders und auf mehreren Ebenen. Das kann eine Therapie ergänzen.</div>
+        <div class="a">Sehr oft sogar. „Trotz guter Therapie komme ich an das Thema nicht ran", das höre ich häufig. <strong>Ich arbeite anders und auf mehreren Ebenen.</strong> Das kann eine Therapie <strong>ergänzen</strong>.</div>
       </details>
       <details class="reveal">
         <summary>Was kostet die Begleitung? <span class="plus"></span></summary>
-        <div class="a">Das ist individuell, je nach Art und Umfang der Begleitung. Wir besprechen es persönlich im Erstgespräch, dieses ist für dich kostenfrei.</div>
+        <div class="a">Das ist <strong>individuell</strong>, je nach Art und Umfang der Begleitung. Wir besprechen es persönlich im Erstgespräch, <strong>dieses ist für dich kostenfrei</strong>.</div>
       </details>
     </div>
   </div>
@@ -568,7 +579,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="reveal">
       <p class="eyebrow">Kontakt</p>
       <h2>Bereit? Dann lass uns sprechen.</h2>
-      <p class="lede">Such dir im Kalender einen Termin aus, der dir passt, die Buchung dauert keine Minute. Wir sprechen rund 45 Minuten, ehrlich und unverbindlich, online.</p>
+      <p class="lede">Such dir im Kalender einen Termin aus, der dir passt, <strong>die Buchung dauert keine Minute</strong>.</p>
+      <p class="lede">Wir sprechen <strong>rund 45 Minuten</strong>, ehrlich und <strong>unverbindlich</strong>, online.</p>
     </div>
     <div class="book-card reveal">
       <div class="book-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="4" y="6" width="22" height="19" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M4 11h22M10 4v4M20 4v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9 17.5l2.4 2.4L16 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
