@@ -61,12 +61,12 @@
   --line-light:rgba(255,242,242,.22);
   --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
   --sans:'Hanken Grotesk','Hanken Grotesk Fallback',Arial,sans-serif;
-  --s-1:clamp(13px,.15vw+12.5px,14px);
-  --s0:clamp(16px,.35vw+15px,17.5px);
-  --s1:clamp(18.5px,.7vw+16px,22px);
-  --h3:clamp(21px,1.1vw+17px,27px);
-  --h2:clamp(30px,3vw+18px,48px);
-  --h1:clamp(38px,4.6vw+21px,70px);
+  --s-1:clamp(13px,.15vw + 12.5px,14px);
+  --s0:clamp(16px,.35vw + 15px,17.5px);
+  --s1:clamp(18.5px,.7vw + 16px,22px);
+  --h3:clamp(21px,1.1vw + 17px,27px);
+  --h2:clamp(30px,3vw + 18px,48px);
+  --h1:clamp(38px,4.6vw + 21px,70px);
   --display:clamp(58px,12vw,140px);
   --maxw:1200px; --gut:clamp(22px,5vw,80px);
   --ease:cubic-bezier(.22,.61,.36,1);
@@ -145,7 +145,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .hero .eyebrow{margin-bottom:22px}
 .hero h1{font-size:var(--h1);margin:0 0 26px;line-height:1.05}
 .hero h1 em{color:var(--clay);display:block;margin-top:.06em}
-.hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw+15px,18.5px);line-height:1.72;color:var(--brown);max-width:44ch}
+.hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw + 15px,18.5px);line-height:1.72;color:var(--brown);max-width:44ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
 /* Hero-Porträt: Rechteck-Hochformat mit deutlich abgerundeten Ecken (Kundenwunsch 15.07.). */
 .hero-figure{width:min(100%,400px);aspect-ratio:4/5}
@@ -196,12 +196,15 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .video-embed{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#2A0A2A;box-shadow:0 24px 50px -34px rgba(43,26,43,.5)}
 .ve-poster{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;display:block;color:#fff}
 .ve-poster img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
-.ve-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,10,42,.28),rgba(42,10,42,.15) 42%,rgba(42,10,42,.72));transition:background .3s var(--ease)}
-.ve-poster:hover .ve-scrim{background:linear-gradient(180deg,rgba(42,10,42,.38),rgba(42,10,42,.25) 42%,rgba(42,10,42,.8))}
-.ve-play{position:absolute;top:calc(50% - 8px);left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:rgba(255,242,242,.16);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1.5px solid rgba(255,255,255,.85);display:grid;place-items:center;color:#fff;padding-left:4px;transition:transform .3s var(--ease),background .3s var(--ease)}
+/* Scrim (Kundenwunsch 16.07.: Cover war „komisch dunkel", unten wie ein schwarzer Balken):
+   obere Bildhälfte jetzt komplett frei, unten nur so viel Verlauf, wie der Titel zum Lesen braucht.
+   Kontrast des Titels wird zusätzlich über text-shadow gehalten — nicht weiter abschwächen. */
+.ve-scrim{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(42,10,42,.26) 76%,rgba(42,10,42,.58) 100%);transition:background .3s var(--ease)}
+.ve-poster:hover .ve-scrim{background:linear-gradient(180deg,rgba(42,10,42,.08) 40%,rgba(42,10,42,.34) 76%,rgba(42,10,42,.64) 100%)}
+.ve-play{position:absolute;top:calc(50% - 8px);left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:rgba(42,10,42,.34);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1.5px solid rgba(255,255,255,.9);box-shadow:0 6px 24px rgba(42,10,42,.35);display:grid;place-items:center;color:#fff;padding-left:4px;transition:transform .3s var(--ease),background .3s var(--ease)}
 .ve-poster:hover .ve-play{transform:translate(-50%,-50%) scale(1.08);background:var(--gold);border-color:var(--gold);color:var(--aubergine,#3D0F3D)}
-.ve-title{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 20px;text-align:center;font-family:var(--serif);font-weight:500;font-size:clamp(19px,2vw,24px);line-height:1.2;color:#fff;text-shadow:0 1px 14px rgba(42,10,42,.6)}
-.ve-name{display:block;margin-top:9px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:13px;letter-spacing:.03em;color:rgba(255,255,255,.82);text-shadow:0 1px 10px rgba(42,10,42,.6)}
+.ve-title{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 20px;text-align:center;font-family:var(--serif);font-weight:500;font-size:clamp(19px,2vw,24px);line-height:1.2;color:#fff;text-shadow:0 2px 16px rgba(42,10,42,.92),0 1px 5px rgba(42,10,42,.8)}
+.ve-name{display:block;margin-top:9px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:13px;letter-spacing:.03em;color:#fff;text-shadow:0 2px 14px rgba(42,10,42,.92),0 1px 4px rgba(42,10,42,.8)}
 .video-embed video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#2A0A2A}
 .sein-video{max-width:620px;margin:38px auto 0}
 .sein-video .ve-poster img{object-position:50% 16%}
@@ -223,6 +226,10 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .fuerwen ul{list-style:none;display:grid;gap:15px;margin-top:22px}
 .fuerwen li{display:flex;gap:13px;color:var(--taupe);line-height:1.55}
 .fuerwen li svg{flex:none;margin-top:4px}
+/* CTA am Ende von „Für wen" (Kundenwunsch 16.07.) */
+.fw-cta{text-align:center;margin-top:clamp(40px,5vw,60px)}
+.fw-cta-lead{font-family:var(--serif);font-weight:600;font-size:var(--h3);color:var(--ink);max-width:none}
+.fw-cta-sub{color:var(--taupe);max-width:46ch;margin:.5em auto 26px}
 
 /* ABLAUF */
 .ablauf{background:var(--sand)}
@@ -282,6 +289,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 /* KONTAKT */
 .kontakt{background:var(--pine)}
 .kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:center}
+/* .solo = Kontakt ohne Textspalte (Kundenwunsch 16.07.): Karte allein, mittig, ruhig begrenzt. */
+.kontakt.solo .wrap{grid-template-columns:1fr;max-width:min(560px,100%);padding-inline:var(--gut)}
 .kontakt .eyebrow{color:var(--gold)}.kontakt .eyebrow::before{background:var(--gold)}
 .kontakt h2{color:#fff;font-size:var(--h2);margin:.3em 0 .5em}
 .kontakt .lede{color:rgba(255,242,242,.82)}
@@ -355,9 +364,13 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="hero-copy reveal in">
       <p class="eyebrow">Begleitung durch Wandlung &amp; Krise</p>
       <h1>Du hast schon so viel versucht, <em>und drehst dich trotzdem im Kreis.</em></h1>
+      <!-- Zeilenumbrüche exakt nach Sibylles Vorgabe (Dokument 16.07.) — die <br> sind gewollt, nicht glätten. -->
       <p class="lede">Ich verspreche dir nicht, dass ich dich irgendwo hinbringe. Ich weiß nicht, was dein Weg ist.</p>
-      <p class="lede">Aber ich kenne <strong>Wandlung</strong>. Ich kenne <strong>Krisen</strong>. Und ich kenne den Punkt, an dem nichts mehr hilft, außer <strong>ehrlich durchzugehen</strong>.</p>
-      <p class="lede">Und genau da begleite ich dich, <strong>ehrlich, klar und ohne was schönzureden</strong>. Bis du wieder klar bist. Und aus dir heraus entscheidest, nicht aus alten Mustern, Prägungen, Druck oder Angst.</p>
+      <p class="lede">Aber ich kenne <strong>Wandlung</strong>. Ich kenne <strong>Krisen</strong>.<br>
+      Und ich kenne den Punkt, an dem nichts mehr hilft,<br>
+      außer <strong>ehrlich durchzugehen</strong>.</p>
+      <p class="lede">Und genau da begleite ich dich, <strong>ehrlich, klar und ohne was schönzureden</strong>. Bis du wieder klar bist, und aus dir heraus entscheidest.<br>
+      Nicht aus alten Mustern, Prägungen, Druck oder Angst.</p>
       <div class="hero-cta">
         <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary" target="_blank" rel="noopener">Kostenfreies Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
@@ -410,11 +423,11 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <p class="reveal">Damit du <strong>fühlst, was dran ist</strong>. Dir wieder selbst traust und deine Entscheidungen <strong>aus dir heraus</strong> triffst, aus deiner Intuition, nicht aus alten Mustern.</p>
     <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary reveal" target="_blank" rel="noopener">Zum kostenfreien Erstgespräch <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <figure class="video-embed sein-video reveal" data-src="assets/video-raum.mp4" data-poster="assets/ueber-portrait-820.jpg">
-      <button class="ve-poster" type="button" aria-label="Video abspielen: Ein Raum, in dem du nicht sein musst">
+      <button class="ve-poster" type="button" aria-label="Video abspielen: Ein Raum, in dem nichts mehr sein muss">
         <img src="assets/ueber-portrait-820.jpg" alt="Sibylle Laßmann, entspannt im Freien" width="820" height="1025" loading="eager" decoding="async">
         <span class="ve-scrim" aria-hidden="true"></span>
         <span class="ve-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
-        <span class="ve-title">Ein Raum, in dem du nicht sein musst</span>
+        <span class="ve-title">Ein Raum, in dem nichts mehr sein muss</span>
       </button>
     </figure>
   </div>
@@ -432,12 +445,12 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <p>Dann starben eine Freundin und mein Vater kurz hintereinander. In mir blieb dieser Satz: <strong>„Das kann es doch nicht gewesen sein.“</strong></p>
       <p>Ich hab alle Firmen verkauft, meinen Besitz aufgelöst und bin <strong>alleine mit meinen Jungs im VW-Bus</strong> losgefahren. Nicht, weil ich einen Plan hatte, sondern weil mein altes Leben vorbei war.</p>
       <p>Danach kamen Zeiten voller <strong>Schmerz, schwerer Depression und unglaublicher Tiefe</strong>. Seit über zehn Jahren gehe ich nun den <strong>schamanischen Weg</strong> und reise bis heute mit einer der ältesten Schamaninnen.</p>
-      <p>Heute stehe ich hier, <strong>roh, ehrlich</strong> für dich, mit dem, was ich am besten kann. <b>Wandlung.</b> Ich habe nie aufgegeben, auch nicht, als ich ganz am Boden lag. Und genau da, wo du gerade stehst kenne ich mich aus.</p>
+      <p>Heute stehe ich hier, <strong>roh, ehrlich</strong> für dich, mit dem, was ich am besten kann. <b>Wandlung.</b> Ich habe nie aufgegeben, auch nicht, als ich ganz am Boden lag. Und genau da, wo du gerade stehst, kenne ich mich aus.</p>
       <div class="chips">
         <span class="chip">Über 10 Jahre schamanischer Weg</span>
         <span class="chip">über 1,5 Jahre im VW-Bus · Wildnis · 19 Länder</span>
         <span class="chip">Geschäftsführerin · Unternehmerin · Mutter</span>
-        <span class="chip">Krisen, Schmerz, und Wandlung selbst erlebt</span>
+        <span class="chip">Krisen, Schmerz und Wandlung selbst erlebt</span>
       </div>
       <figure class="ueber-inset">
         <img src="assets/soehne-700.jpg" srcset="assets/soehne-700.jpg 700w, assets/soehne-1100.jpg 1100w" sizes="(max-width:940px) 90vw, 640px" alt="Sibylle mit ihren beiden Söhnen" width="1100" height="733" loading="lazy" decoding="async">
@@ -465,7 +478,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <div class="col reveal">
         <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(43,26,43,.06)"/><path d="M8 8l8 8M16 8l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg> Eher nicht, wenn …</h3>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du jemanden suchst, der dir sagt was du tun sollst.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du jemanden suchst, der dir sagt, was du tun sollst.</span></li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du lieber alles schönreden möchtest, statt ehrlich hinzuschauen.</span></li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="#9A86A0" stroke-width="1.8" stroke-linecap="round"/></svg><span>du eine medizinische Diagnose/Behandlung suchst.</span></li>
         </ul>
@@ -479,6 +492,12 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
         <span class="ve-title">Ich bin kein Coach</span>
       </button>
     </figure>
+    <!-- CTA nach „Für wen, und für wen nicht" (Kundenwunsch 16.07.), Text wörtlich von Sibylle. -->
+    <div class="fw-cta reveal">
+      <p class="fw-cta-lead">Fühlt sich stimmig an?</p>
+      <p class="fw-cta-sub">Dann lass uns im kostenfreien Erstgespräch schauen, ob ich dich begleiten kann.</p>
+      <a href="https://calendly.com/socialmedia-sibyllelassmann/60" class="btn btn-primary" target="_blank" rel="noopener">Erstgespräch buchen <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -556,7 +575,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     <div class="list">
       <details class="reveal">
         <summary>Was passiert im kostenfreien Erstgespräch? <span class="plus"></span></summary>
-        <div class="a">Wir lernen uns in <strong>rund 45 Minuten</strong> online kennen. Du erzählst und kannst fragen stellen. Ich sage dir <strong>ehrlich</strong>, ob und wie ich dich begleiten kann, und wir spüren, ob es passt. <strong>Kein Verkaufsgespräch.</strong></div>
+        <div class="a">Wir lernen uns in <strong>rund 45 Minuten</strong> online kennen. Du erzählst und kannst Fragen stellen. Ich sage dir <strong>ehrlich</strong>, ob und wie ich dich begleiten kann, und wir spüren, ob es passt. <strong>Kein Verkaufsgespräch.</strong></div>
       </details>
       <details class="reveal">
         <summary>Ist das Therapie oder Medizin? <span class="plus"></span></summary>
@@ -574,14 +593,10 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
   </div>
 </section>
 
-<section class="kontakt sec dark" id="kontakt">
+<!-- Kundenwunsch 16.07.: Überschrift + beide Fließtexte entfernt (standen schon im Ablauf).
+     Sektion dadurch einspaltig-zentriert statt Text|Karte. -->
+<section class="kontakt sec dark solo" id="kontakt">
   <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Bereit? Dann lass uns sprechen.</h2>
-      <p class="lede">Such dir im Kalender einen Termin aus, der dir passt, <strong>die Buchung dauert keine Minute</strong>.</p>
-      <p class="lede">Wir sprechen <strong>rund 45 Minuten</strong>, ehrlich und <strong>unverbindlich</strong>, online.</p>
-    </div>
     <div class="book-card reveal">
       <div class="book-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="4" y="6" width="22" height="19" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M4 11h22M10 4v4M20 4v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9 17.5l2.4 2.4L16 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <h3>Kostenfreies Erstgespräch buchen</h3>
@@ -626,18 +641,55 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       fig.innerHTML='';fig.appendChild(v);var p=v.play();p&&p.catch(function(){});
     });
   });
+  /* Slider (Kundenwunsch 16.07.: „lieber einfach durchlaufen und wieder beim ersten weiter machen"):
+     Vorwärts läuft endlos durch — die erste Karte ist ans Ende geklont, nach dem Weiterschieben auf
+     den Klon springt der Track ohne Transition auf 0 zurück (unsichtbar). Kein Rückwärts-Rauschen mehr.
+     Reset per setTimeout, NICHT transitionend (feuerte unzuverlässig, Track lief ins Leere).
+     Der Zurück-Pfeil bleibt als Bedienung erhalten, nur das Auto-Weiter springt nie zurück. */
   document.querySelectorAll('.st-carousel').forEach(function(car){
     var track=car.querySelector('.st-track'),dotsWrap=car.querySelector('.st-dots');
     var n=track.children.length;
     if(n<2)return;
-    var i=0,timer=null,dots=[];
-    function go(k){i=((k%n)+n)%n;track.style.transform='translateX('+(-i*100)+'%)';for(var x=0;x<dots.length;x++)dots[x].className='st-dot'+(x===i?' on':'');}
-    function auto(){clearInterval(timer);timer=setInterval(function(){go(i+1);},5000);}
-    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='st-dot'+(idx===0?' on':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){go(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
-    car.querySelectorAll('.st-arrow').forEach(function(b){b.addEventListener('click',function(){go(i+parseInt(b.getAttribute('data-dir'),10));auto();});});
+    var SPEED=700; /* muss zur CSS-Transition von .st-track passen */
+    track.appendChild(track.children[0].cloneNode(true));
+    var i=0,timer=null,dots=[],busy=false;
+    function paint(){for(var x=0;x<dots.length;x++)dots[x].className='st-dot'+(x===((i%n)+n)%n?' on':'');}
+    function slide(to){
+      track.style.transition='';
+      track.style.transform='translateX('+(-to*100)+'%)';
+      i=to;paint();
+    }
+    function next(){
+      if(busy)return;busy=true;
+      slide(i+1);
+      if(i===n){ /* auf dem Klon gelandet: unsichtbar auf das echte erste Bild zurücksetzen */
+        setTimeout(function(){
+          track.style.transition='none';
+          track.style.transform='translateX(0%)';
+          i=0;paint();
+          track.offsetHeight; /* Reflow erzwingen, sonst schluckt der Browser das Zurücksetzen */
+          track.style.transition='';
+          busy=false;
+        },SPEED);
+      }else{setTimeout(function(){busy=false;},SPEED);}
+    }
+    function jump(k){ /* Dots + Zurück-Pfeil: direkter Sprung, immer innerhalb der echten Karten */
+      if(busy)return;
+      track.style.transition='';
+      slide(((k%n)+n)%n);
+    }
+    function auto(){clearInterval(timer);timer=setInterval(next,5000);}
+    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='st-dot'+(idx===0?' on':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){jump(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
+    car.querySelectorAll('.st-arrow').forEach(function(b){
+      b.addEventListener('click',function(){
+        var dir=parseInt(b.getAttribute('data-dir'),10);
+        if(dir>0){next();}else{jump(i-1);}
+        auto();
+      });
+    });
     car.addEventListener('mouseenter',function(){clearInterval(timer);});
     car.addEventListener('mouseleave',auto);
-    go(0);auto();
+    slide(0);auto();
   });
   var reveals=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){

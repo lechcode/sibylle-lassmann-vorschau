@@ -43,12 +43,12 @@
   --line-light:rgba(255,242,242,.22);
   --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
   --sans:'Hanken Grotesk','Hanken Grotesk Fallback',Arial,sans-serif;
-  --s-1:clamp(13px,.15vw+12.5px,14px);
-  --s0:clamp(16px,.35vw+15px,17.5px);
-  --s1:clamp(18.5px,.7vw+16px,22px);
-  --h3:clamp(21px,1.1vw+17px,27px);
-  --h2:clamp(30px,3vw+18px,48px);
-  --h1:clamp(38px,4.6vw+21px,68px);
+  --s-1:clamp(13px,.15vw + 12.5px,14px);
+  --s0:clamp(16px,.35vw + 15px,17.5px);
+  --s1:clamp(18.5px,.7vw + 16px,22px);
+  --h3:clamp(21px,1.1vw + 17px,27px);
+  --h2:clamp(30px,3vw + 18px,48px);
+  --h1:clamp(38px,4.6vw + 21px,68px);
   --display:clamp(52px,11vw,120px);
   --maxw:1200px; --gut:clamp(22px,5vw,80px);
   --ease:cubic-bezier(.22,.61,.36,1);
@@ -106,18 +106,34 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .frame img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);box-shadow:0 40px 70px -34px rgba(43,26,43,.5)}
 .frame img{object-position:50% 38%}
 .frame::before{content:"";position:absolute;inset:auto -16px -16px auto;width:70%;height:74%;border:1.5px solid var(--gold);border-radius:var(--r-lg);z-index:-1}
+/* Fotografen-Credit (Kundenauflage 16.07.: beide Forschungsraum-Bilder sind © Susan Graul) */
+.foto-credit{margin-top:9px;font-size:12px;letter-spacing:.04em;color:var(--taupe-soft);text-align:right}
+/* .frame hat feste aspect-ratio → Credit absolut darunter haengen, sonst staucht er das Bild.
+   Links ausgerichtet, damit er nicht mit dem Goldrahmen (::before, rechts unten) kollidiert. */
+.frame .foto-credit{position:absolute;top:100%;left:0;margin-top:10px;text-align:left}
+/* CTA + Bild nach „Was sich im Alltag ändert" */
+.alltag-cta{text-align:center;margin-top:clamp(40px,5vw,58px)}
+.alltag-cta-lead{font-family:var(--serif);font-weight:600;font-size:var(--h3);color:var(--ink);max-width:none}
+.alltag-cta-sub{color:var(--taupe);max-width:46ch;margin:.4em auto 24px}
+.alltag-foto{width:min(100%,420px);margin:clamp(40px,5vw,56px) auto 0}
+.alltag-foto img{width:100%;height:auto;border-radius:var(--r-lg);box-shadow:0 40px 70px -34px rgba(43,26,43,.5)}
+.alltag-foto .foto-credit{text-align:center}
 /* HERO */
 .hero{background:linear-gradient(180deg,var(--cream),var(--paper));padding-top:clamp(120px,17vh,168px);padding-bottom:clamp(48px,7vw,90px);overflow:clip}
 .hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(36px,5vw,80px);align-items:center}
 .hero .back{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--brown);margin-bottom:18px}
 .hero h1{font-size:var(--h1);margin:.1em 0 24px;line-height:1.05}
 .hero h1 em{color:var(--clay)}
-.hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw+15px,18.5px);color:var(--brown);max-width:46ch}
+.hero .lede{font-family:var(--sans);font-weight:400;font-size:clamp(16.5px,.35vw + 15px,18.5px);color:var(--brown);max-width:46ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 /* ETHOS dark */
 .ethos{background:var(--pine);color:var(--cream);text-align:center;position:relative;overflow:clip}
 .ethos .eyebrow{color:var(--gold)}.ethos .eyebrow::before{background:var(--gold)}
 .ethos .big{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--display);color:var(--gold);line-height:.92;letter-spacing:-.02em;margin:.12em 0 .18em;max-width:none;text-shadow:0 2px 40px rgba(0,0,0,.25)}
+/* Schlusswort der Sektion: laenger als ein Zwei-Wort-Display, daher kleiner gestaffelt (16.07.) */
+.ethos .big-outro{font-size:clamp(32px,5.6vw,64px);line-height:1;margin:.1em 0 0;text-wrap:balance}
+.ethos .ethos-lead{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.4vw,34px);line-height:1.3;color:#fff;max-width:22ch;margin:.5em auto .55em}
+.ethos .ethos-outro{margin-top:1.5em;color:rgba(255,242,242,.72)}
 .ethos p{color:rgba(255,242,242,.84);max-width:52ch;margin-inline:auto;font-size:var(--s1)}
 .ethos::before,.ethos::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(206,183,97,.16),transparent 70%);pointer-events:none}
 .ethos::before{top:-140px;left:-100px}.ethos::after{bottom:-160px;right:-120px}
@@ -134,7 +150,7 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .nutzen .fpull p .hl{color:var(--clay);font-style:normal;font-weight:600}
 .nutzen .fpull cite{display:block;margin-top:16px;font-style:normal;font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--gold-ink)}
 .nutzen .questions{max-width:560px;margin:clamp(42px,6vw,64px) auto 0;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,32px) clamp(26px,4vw,40px);display:grid;gap:13px;box-shadow:0 24px 50px -44px rgba(43,26,43,.6)}
-.nutzen .questions li{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1vw+15px,20px);color:var(--ink);padding-left:24px;position:relative;list-style:none;line-height:1.4}
+.nutzen .questions li{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1vw + 15px,20px);color:var(--ink);padding-left:24px;position:relative;list-style:none;line-height:1.4}
 .nutzen .questions li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--gold)}
 .nutzen .framing{max-width:640px;margin:clamp(48px,6vw,72px) auto 0;text-align:center}
 .nutzen .framing .not{color:var(--taupe);font-size:var(--s0)}
@@ -246,24 +262,28 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
       <p class="eyebrow">Wöchentlicher Forschungsraum</p>
       <h1>Deine Worte, <em>deine Realität.</em></h1>
       <p class="lede">Hier schauen wir auf die Sätze, die du täglich sagst, zu anderen und <strong>vor allem zu dir selbst</strong>. Wir erforschen, welche <strong>Überzeugungen</strong> dahinter stecken.</p>
-      <p class="lede">Denn deine Worte zeigen dir: wo du dich <strong>klein machst</strong>, dich <strong>rechtfertigst</strong>, über deine <strong>Grenzen</strong> gehst, wo du <strong>Verantwortung</strong> übernimmst, die gar nicht bei dir liegt.</p>
+      <p class="lede">Denn deine Worte zeigen dir, wo du dich <strong>klein machst</strong>, dich <strong>rechtfertigst</strong>, über deine <strong>Grenzen</strong> gehst, oder wo du <strong>Verantwortung</strong> übernimmst, die gar nicht bei dir liegt.</p>
       <div class="hero-cta">
         <a href="#schnuppern" class="btn btn-primary">Einmal kostenfrei schnuppern <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
     <figure class="frame reveal in">
       <img src="assets/forsch-portrait-560.jpg" srcset="assets/forsch-portrait-560.jpg 560w, assets/forsch-portrait-900.jpg 900w" sizes="(max-width:940px) 300px, 420px" alt="Sibylle Laßmann bei der Arbeit, Kerze und Journal" width="900" height="1125" fetchpriority="high" decoding="async">
+      <figcaption class="foto-credit">Foto: Susan Graul</figcaption>
     </figure>
   </div>
 </header>
 
 <section class="ethos sec">
   <div class="wrap">
+    <!-- Kundenwunsch 16.07.: nicht mehr „Ehrlich hinhören" ist das große Wort, sondern unten der
+         „Anfang von echter Wandlung" — der Schlusssatz trägt die Sektion jetzt aus. -->
     <p class="eyebrow center reveal">Die Haltung</p>
-    <p class="big reveal">Ehrlich hinhören.</p>
+    <p class="ethos-lead reveal">Ehrlich hinhören.</p>
     <p class="reveal">Im Forschungsraum hören wir auf das, was du <strong>wirklich</strong> sagst, und auf das, was darin sichtbar wird.</p>
     <p class="reveal">Es geht <strong>nicht</strong> darum, alles schön oder positiv zu reden, und auch nicht darum, dich zu verbessern. Sondern zu erkennen, welche <strong>Überzeugungen, Reaktionen oder Muster</strong> in deiner Sprache sichtbar werden, die dir heute nicht mehr dienen und <strong>unbewusst deine Realität mitbestimmen</strong>.</p>
-    <p class="reveal">Genau das ist der <strong>Anfang von echter Wandlung</strong>.</p>
+    <p class="ethos-outro reveal">Und genau das ist der</p>
+    <p class="big big-outro reveal">Anfang von echter Wandlung.</p>
   </div>
 </section>
 
@@ -275,18 +295,19 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     </div>
     <div class="steps">
       <div class="step reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14M4 11h14M4 16h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <!-- Icons nach Kundenwunsch 16.07.: Ohr (hören) · Auge (schauen) · Glühbirne (bewusst werden) -->
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M5.6 8.4a5.4 5.4 0 1 1 10.8 0c0 2.3-1.4 3.3-2.6 4.3-1 .9-1.6 1.7-1.7 3a2.2 2.2 0 0 1-4.3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.6 8.4a2.4 2.4 0 1 1 3.7 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Wir hören hin</h3>
         <p>Mit <strong>einfachen Techniken und Übungen</strong> schauen wir uns <strong>konkrete Worte oder Sätze aus dem Alltag</strong> an.</p>
       </div>
       <div class="step reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="currentColor" stroke-width="1.7"/><path d="M11 7v4l2.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M1.8 11S5 5.4 11 5.4 20.2 11 20.2 11 17 16.6 11 16.6 1.8 11 1.8 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="11" cy="11" r="2.9" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Wir schauen dahinter</h3>
         <p>Welche <strong>Überzeugung</strong>, welches <strong>Muster</strong> oder welcher <strong>Glaubenssatz</strong> steckt hinter deinen Worten? Welche Reaktionen entstehen dadurch in deinem Alltag?</p>
         <p>Wir forschen, gemeinsam, <strong>ohne Bewertung</strong>.</p>
       </div>
       <div class="step reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3c-3 3-4 6.5-2.8 10.5C5 12 4 8.5 6.4 4.5c1.8 1.8 2.6 4.5 2.2 7.3 1.9-3 2-6.3 2.4-8.8Z" fill="currentColor"/><path d="M11 13v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M7.6 14.4a5.8 5.8 0 1 1 6.8 0c-.7.5-1.1 1.1-1.2 1.9H8.8c-.1-.8-.5-1.4-1.2-1.9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 18.6h4M9.6 20.4h2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Etwas darf sich lösen</h3>
         <p>Du nimmst es mit in deinen Alltag, <strong>nicht als Aufgabe</strong>, sondern weil du dir über etwas bewusst geworden bist.</p>
         <p>Und genau da fängt <strong>Veränderung</strong> an. Du nimmst anders wahr, reagierst anders, und Schritt für Schritt entsteht <strong>deine neue Realität</strong>.</p>
@@ -345,6 +366,17 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
         <button class="qc-arrow" type="button" data-dir="1" aria-label="Nächstes Zitat">›</button>
       </div>
     </div>
+    <!-- CTA + Bild nach „Was sich im Alltag ändert" (Kundenwunsch 16.07.), Text wörtlich von Sibylle.
+         Foto: Susan Graul (Copyright-Kennzeichnung ist Kundenauflage — nicht entfernen). -->
+    <div class="alltag-cta reveal">
+      <p class="alltag-cta-lead">Du willst den Raum selbst erleben?</p>
+      <p class="alltag-cta-sub">Komm einmal kostenfrei dazu.</p>
+      <a href="#schnuppern" class="btn btn-primary">Kostenfrei schnuppern <svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <figure class="alltag-foto reveal">
+      <img src="assets/sibylle-schreibt-560.jpg" srcset="assets/sibylle-schreibt-560.jpg 560w, assets/sibylle-schreibt-900.jpg 900w" sizes="(max-width:940px) 78vw, 420px" alt="Sibylle Laßmann schreibt bei Kerzenschein in ihr Journal" width="900" height="1350" loading="lazy" decoding="async">
+      <figcaption class="foto-credit">Foto: Susan Graul</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -392,7 +424,8 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
           <p class="snf-msg" role="status" aria-live="polite"></p>
         </form>
       </div>
-      <p class="book-fee">Den Beitrag besprechen wir in Ruhe, komm erst einmal <strong>kostenfrei zum Schnuppern</strong>.</p>
+      <!-- „Den Beitrag besprechen wir in Ruhe …" auf Kundenwunsch 16.07. entfernt.
+           (Damit steht auf der Seite bewusst gar kein Preis-Hinweis mehr.) -->
       <p class="snf-consent">Wir nutzen deine E-Mail nur, um dir einmalig den Zoom-Link zuzuschicken. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
       <div class="safe-note">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5l6 2.2v4.6c0 3.7-2.5 6.3-6 7.7-3.5-1.4-6-4-6-7.7V3.7L9 1.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M6.4 9l1.8 1.8L12 6.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -456,18 +489,45 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
     reveals.forEach(function(el){io.observe(el);});
   }else{reveals.forEach(function(el){el.classList.add('in');});}
 
+  /* Slider (Kundenwunsch 16.07.: „lieber einfach durchlaufen und wieder beim ersten weiter machen"):
+     identische Logik wie die Startseite — erste Karte ans Ende geklont, Reset ohne Transition per
+     setTimeout (NICHT transitionend). Zurück-Pfeil bleibt Bedienung, Autoplay springt nie zurück. */
   document.querySelectorAll('.qcarousel').forEach(function(car){
     var track=car.querySelector('.qc-track'),dotsWrap=car.querySelector('.qc-dots');
     var n=track.children.length;
     if(n<2)return;
-    var i=0,timer=null,dots=[];
-    function go(k){i=((k%n)+n)%n;track.style.transform='translateX('+(-i*100)+'%)';for(var x=0;x<dots.length;x++)dots[x].className='qc-dot'+(x===i?' is-active':'');}
-    function auto(){clearInterval(timer);timer=setInterval(function(){go(i+1);},5000);}
-    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='qc-dot'+(idx===0?' is-active':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){go(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
-    car.querySelectorAll('.qc-arrow').forEach(function(b){b.addEventListener('click',function(){go(i+parseInt(b.getAttribute('data-dir'),10));auto();});});
+    var SPEED=500; /* muss zur CSS-Transition von .qc-track passen (.5s) */
+    track.appendChild(track.children[0].cloneNode(true));
+    var i=0,timer=null,dots=[],busy=false;
+    function paint(){for(var x=0;x<dots.length;x++)dots[x].className='qc-dot'+(x===((i%n)+n)%n?' is-active':'');}
+    function slide(to){track.style.transition='';track.style.transform='translateX('+(-to*100)+'%)';i=to;paint();}
+    function next(){
+      if(busy)return;busy=true;
+      slide(i+1);
+      if(i===n){
+        setTimeout(function(){
+          track.style.transition='none';
+          track.style.transform='translateX(0%)';
+          i=0;paint();
+          track.offsetHeight; /* Reflow erzwingen, sonst schluckt der Browser das Zuruecksetzen */
+          track.style.transition='';
+          busy=false;
+        },SPEED);
+      }else{setTimeout(function(){busy=false;},SPEED);}
+    }
+    function jump(k){if(busy)return;track.style.transition='';slide(((k%n)+n)%n);}
+    function auto(){clearInterval(timer);timer=setInterval(next,5000);}
+    for(var d=0;d<n;d++){(function(idx){var s=document.createElement('button');s.type='button';s.className='qc-dot'+(idx===0?' is-active':'');s.setAttribute('aria-label','Zitat '+(idx+1));s.addEventListener('click',function(){jump(idx);auto();});dotsWrap.appendChild(s);dots.push(s);})(d);}
+    car.querySelectorAll('.qc-arrow').forEach(function(b){
+      b.addEventListener('click',function(){
+        var dir=parseInt(b.getAttribute('data-dir'),10);
+        if(dir>0){next();}else{jump(i-1);}
+        auto();
+      });
+    });
     car.addEventListener('mouseenter',function(){clearInterval(timer);});
     car.addEventListener('mouseleave',auto);
-    go(0);auto();
+    slide(0);auto();
   });
 
   document.querySelectorAll('form.snf').forEach(function(form){
