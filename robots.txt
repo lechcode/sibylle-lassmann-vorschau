@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /seo-vorschau/
 
 Sitemap: https://sibylle-lassmann.de/sitemap.xml
