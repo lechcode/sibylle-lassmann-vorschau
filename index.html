@@ -201,6 +201,18 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 .mirror-item .dot{flex:none;margin-top:2px;width:34px;height:34px;border-radius:50%;background:var(--blush);display:grid;place-items:center}
 .mirror-item p{color:var(--taupe);max-width:none;margin:0}
 .mirror-item b{color:var(--ink);font-weight:700}
+/* Mirror Variante A (28.07.): Rahmen (Kopf + Schlusssatz) + 3 Symptom-Karten, einspaltig gestapelt */
+.mirror .wrap{display:block}
+.mirror-head{max-width:760px;margin-bottom:clamp(32px,4vw,46px)}
+.mirror-head h2{font-size:var(--h2);margin-top:.3em}
+.mirror-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,24px)}
+.mcard{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,2.6vw,32px)}
+.mcard .mic{width:44px;height:44px;border-radius:50%;background:var(--blush);display:grid;place-items:center;color:var(--clay);margin-bottom:16px}
+.mcard b{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink);display:block;margin-bottom:7px;line-height:1.25}
+.mcard p{color:var(--taupe);max-width:none;font-size:15.5px;line-height:1.55}
+.mirror-outro{max-width:640px;margin:clamp(38px,5vw,48px) auto 0;text-align:center;font-family:var(--serif);font-size:clamp(21px,2vw,28px);line-height:1.35;color:var(--ink)}
+.mirror-outro em{font-style:italic;color:var(--clay)}
+@media(max-width:820px){.mirror-cards{grid-template-columns:1fr}}
 
 /* WANDLUNG, dunkel, dramatisch */
 .sein{background:var(--pine);color:var(--cream);text-align:center;position:relative;overflow:clip}
@@ -428,29 +440,30 @@ h2.sein-lead{letter-spacing:normal;text-wrap:wrap}
 
 <section class="mirror sec" id="mirror">
   <div class="wrap">
-    <!-- Abschnitt von Sibylle geschärft (Fließtext 1:1 aus ihrer Vorgabe) — links als zusammenhängender
-         Text, rechts die 3 Icon-Kacheln als visuelle Anker (Kundenwunsch 28.07.: Kacheln behalten). -->
-    <div class="reveal">
+    <!-- Variante A (Kundenwunsch 28.07.): Rahmen (H2 + Schlusssatz) + 3 Symptom-Karten.
+         Sibylles Wortlaut, jeder Gedanke nur einmal — keine Doppelung von Text und Karten mehr. -->
+    <div class="mirror-head reveal">
       <p class="eyebrow">Vielleicht kennst du das</p>
-      <h2 style="font-size:var(--h2);margin-top:.3em">Du funktionierst, <em>und genau das kostet dich immer mehr Kraft.</em></h2>
-      <p class="lede" style="margin-top:1.1em">Du hast schon viel probiert: <strong>Therapie, Coaching, Methoden, Gespräche.</strong> Manches hat geholfen, aber nicht bis zum Kern. Und trotzdem reagiert etwas in dir immer wieder gleich.</p>
-      <p class="lede">Du spürst deine Grenze und sagst trotzdem Ja. Du hältst durch, ziehst dich zurück oder funktionierst weiter. Wenn du ehrlich bist, weißt du oft nicht mehr, <strong>was du wirklich brauchst.</strong></p>
-      <p class="lede">Hier geht es nicht um noch eine Methode. Sondern darum, dort weiterzugehen, <strong>wo Verstehen allein nicht mehr reicht.</strong></p>
+      <h2>Du funktionierst, <em>und genau das kostet dich immer mehr Kraft.</em></h2>
     </div>
-    <div class="mirror-list reveal">
-      <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4.1l1.3 1.3L5.5 3.2M2 8.2l1.3 1.3 2.2-2.2M2 12.3l1.3 1.3 2.2-2.2" stroke="#800080" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.4 4.1h5.6M8.4 8.4h5.6M8.4 12.7h5.6" stroke="#800080" stroke-width="1.3" stroke-linecap="round"/></svg></span>
-        <p><b>Du hast schon viel probiert.</b> Therapie, Coaching, Methoden, Gespräche, manches hat geholfen, aber nicht bis zum Kern.</p>
+    <div class="mirror-cards reveal">
+      <div class="mcard">
+        <div class="mic"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4.1l1.3 1.3L5.5 3.2M2 8.2l1.3 1.3 2.2-2.2M2 12.3l1.3 1.3 2.2-2.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.4 4.1h5.6M8.4 8.4h5.6M8.4 12.7h5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <b>Du hast schon viel probiert.</b>
+        <p>Therapie, Coaching, Methoden, Gespräche. Manches hat geholfen, aber nicht bis zum Kern.</p>
       </div>
-      <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.4 8a5.4 5.4 0 1 1-1.7-3.9" stroke="#800080" stroke-width="1.4" stroke-linecap="round"/><path d="M13.6 2.2v3h-3" stroke="#800080" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <p><b>Etwas reagiert immer wieder gleich.</b> Du verstehst viel, und trotzdem läuft in dir dieselbe Reaktion ab.</p>
+      <div class="mcard">
+        <div class="mic"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.4 8a5.4 5.4 0 1 1-1.7-3.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M13.6 2.2v3h-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <b>Etwas reagiert immer wieder gleich.</b>
+        <p>Du spürst deine Grenze und sagst trotzdem Ja. Du hältst durch oder ziehst dich zurück.</p>
       </div>
-      <div class="mirror-item">
-        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13.6S2.4 10.2 2.4 6.4a2.9 2.9 0 0 1 5.6-1.7 2.9 2.9 0 0 1 5.6 1.7c0 3.8-5.6 7.2-5.6 7.2Z" stroke="#800080" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
-        <p><b>Du spürst dich kaum noch.</b> Du funktionierst, hältst durch oder ziehst dich zurück. Und weißt oft nicht, was du wirklich brauchst.</p>
+      <div class="mcard">
+        <div class="mic"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13.6S2.4 10.2 2.4 6.4a2.9 2.9 0 0 1 5.6-1.7 2.9 2.9 0 0 1 5.6 1.7c0 3.8-5.6 7.2-5.6 7.2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <b>Du spürst dich kaum noch.</b>
+        <p>Wenn du ehrlich bist, weißt du oft nicht mehr, was du wirklich brauchst.</p>
       </div>
     </div>
+    <p class="mirror-outro reveal">Hier geht es nicht um noch eine Methode. Sondern darum, dort weiterzugehen, <em>wo Verstehen allein nicht mehr reicht.</em></p>
   </div>
 </section>
 
