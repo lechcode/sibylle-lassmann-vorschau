@@ -196,9 +196,6 @@ html.menu-open .nav{background:transparent!important;box-shadow:none!important;-
 
 /* MIRROR */
 .mirror .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(32px,5vw,72px);align-items:center}
-.mirror.solo .wrap{display:block}
-.mirror-solo{max-width:760px;margin-inline:auto}
-.mirror-solo .lede+.lede{margin-top:.85em}
 .mirror-list{display:grid;gap:8px}
 .mirror-item{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
 .mirror-item:last-child{border-bottom:0}
@@ -430,16 +427,30 @@ h2.sein-lead{letter-spacing:normal;text-wrap:wrap}
   </dl>
 </section>
 
-<section class="mirror sec solo" id="mirror">
+<section class="mirror sec" id="mirror">
   <div class="wrap">
-    <!-- Abschnitt von Sibylle geschärft (Text 1:1 aus ihrer Vorgabe). Bewusst als ruhiger
-         Fließtext statt der 3 Icon-Kacheln — ihr verdichteter Wortlaut trägt die Sektion allein. -->
-    <div class="reveal mirror-solo">
+    <!-- Abschnitt von Sibylle geschärft (Fließtext 1:1 aus ihrer Vorgabe) — links als zusammenhängender
+         Text, rechts die 3 Icon-Kacheln als visuelle Anker (Kundenwunsch 28.07.: Kacheln behalten). -->
+    <div class="reveal">
       <p class="eyebrow">Vielleicht kennst du das</p>
       <h2 style="font-size:var(--h2);margin-top:.3em">Du funktionierst, <em>und genau das kostet dich immer mehr Kraft.</em></h2>
       <p class="lede" style="margin-top:1.1em">Du hast schon viel probiert: <strong>Therapie, Coaching, Methoden, Gespräche.</strong> Manches hat geholfen, aber nicht bis zum Kern. Und trotzdem reagiert etwas in dir immer wieder gleich.</p>
       <p class="lede">Du spürst deine Grenze und sagst trotzdem Ja. Du hältst durch, ziehst dich zurück oder funktionierst weiter. Wenn du ehrlich bist, weißt du oft nicht mehr, <strong>was du wirklich brauchst.</strong></p>
       <p class="lede">Hier geht es nicht um noch eine Methode. Sondern darum, dort weiterzugehen, <strong>wo Verstehen allein nicht mehr reicht.</strong></p>
+    </div>
+    <div class="mirror-list reveal">
+      <div class="mirror-item">
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4.1l1.3 1.3L5.5 3.2M2 8.2l1.3 1.3 2.2-2.2M2 12.3l1.3 1.3 2.2-2.2" stroke="#800080" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.4 4.1h5.6M8.4 8.4h5.6M8.4 12.7h5.6" stroke="#800080" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <p><b>Du hast schon viel probiert.</b> Therapie, Coaching, Methoden, Gespräche, manches hat geholfen, aber nicht bis zum Kern.</p>
+      </div>
+      <div class="mirror-item">
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.4 8a5.4 5.4 0 1 1-1.7-3.9" stroke="#800080" stroke-width="1.4" stroke-linecap="round"/><path d="M13.6 2.2v3h-3" stroke="#800080" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <p><b>Etwas reagiert immer wieder gleich.</b> Du verstehst viel, und trotzdem läuft in dir dieselbe Reaktion ab.</p>
+      </div>
+      <div class="mirror-item">
+        <span class="dot"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13.6S2.4 10.2 2.4 6.4a2.9 2.9 0 0 1 5.6-1.7 2.9 2.9 0 0 1 5.6 1.7c0 3.8-5.6 7.2-5.6 7.2Z" stroke="#800080" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+        <p><b>Du spürst dich kaum noch.</b> Du funktionierst, hältst durch oder ziehst dich zurück. Und weißt oft nicht, was du wirklich brauchst.</p>
+      </div>
     </div>
   </div>
 </section>
